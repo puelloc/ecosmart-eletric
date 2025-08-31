@@ -9,7 +9,6 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%237ed957' d='M32 6a18 18 0 0 0-9 33v5a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5A18 18 0 0 0 32 6z'/%3E%3Cpath fill='%23ffffff' d='M20 34h9l-4 8 19-14h-9l4-8z'/%3E%3C/ svg%3E" />
 
   <!-- Schema.org: LocalBusiness (Electrician) -->
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,166 +23,8 @@
   }
   </script>
 
-  <style>
-    :root{
-      /* Palette inspired by the business card */
-      --blue-dark:#0b3e63;
-      --blue:#155e92;
-      --green:#7ed957; /* lime/eco green */
-      --green-dark:#5ab835;
-      --ink:#0a1b2a;
-      --text:#eaf6ff;
-      --muted:#cfe7ff;
-      --white:#fff;
-      --shadow: 0 10px 30px rgba(0,0,0,.25);
-      --radius: 18px;
-    }
-
-    /* Reset + base */
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: "Segoe UI", "Trebuchet MS", Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: linear-gradient(135deg,var(--blue-dark),var(--blue));
-      line-height:1.55;
-    }
-    a{color:inherit;text-decoration:none}
-    a:focus, button:focus{outline: 3px solid var(--green); outline-offset: 2px;}
-
-    /* Layout */
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{
-      position:sticky; top:0; z-index:10;
-      background: linear-gradient(135deg,var(--blue-dark),var(--blue));
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      backdrop-filter: blur(6px);
-    }
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:16px; padding:12px 0;
-    }
-    .brand{
-      display:flex; align-items:center; gap:14px; font-weight:800; letter-spacing:.5px
-    }
-    .logo{
-      width:44px;height:44px; display:grid; place-items:center;
-      background: radial-gradient(60% 60% at 50% 50%, var(--green) 0%, var(--green-dark) 100%);
-      border-radius:12px; box-shadow: var(--shadow);
-    }
-    .logo svg{width:28px;height:28px}
-    .brand .name{font-size:1.2rem}
-    .accent{color:var(--green)}
-
-    .lang-switch{
-      display:flex; align-items:center; gap:8px;
-      background: rgba(0,0,0,.2);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius: 12px;
-      padding:6px 10px;
-    }
-    .lang-switch select{
-      appearance:none; background:transparent; color:var(--white);
-      border:none; font-weight:600; cursor:pointer;
-    }
-
-    /* Hero */
-    .hero{
-      padding: clamp(40px, 7vw, 90px) 0 60px;
-      background:
-        radial-gradient(1200px 400px at -10% -10%, rgba(126,217,87,.25), transparent 60%),
-        radial-gradient(800px 300px at 110% 0%, rgba(126,217,87,.18), transparent 50%);
-    }
-    .hero-grid{
-      display:grid; grid-template-columns: 1.3fr 1fr; gap:36px; align-items:center;
-    }
-    .hero h1{
-      margin:0 0 10px; font-size: clamp(28px, 5vw, 52px); line-height:1.08;
-      text-shadow: 0 2px 0 rgba(0,0,0,.15);
-    }
-    .subtitle{font-size: clamp(16px, 2.3vw, 22px); color: var(--muted)}
-    .cta{
-      display:inline-flex; align-items:center; gap:10px; margin-top:22px;
-      background: linear-gradient(135deg,var(--green),var(--green-dark));
-      color: var(--ink); font-weight:800; letter-spacing:.3px;
-      padding:14px 20px; border-radius: 999px; box-shadow: var(--shadow);
-      transition: transform .08s ease-in-out;
-    }
-    .cta:hover{transform: translateY(-2px)}
-    .call-chip{
-      display:inline-flex; gap:6px; align-items:center; margin-left:10px;
-      border:1px solid rgba(255,255,255,.22);
-      padding:8px 12px; border-radius: 999px; color:var(--white)
-    }
-
-    .badge-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
-    .badge{
-      background: rgba(0,0,0,.25); border: 1px solid rgba(255,255,255,.14);
-      padding:6px 10px; border-radius:999px; font-weight:700; font-size:.9rem
-    }
-
-    .hero-card{
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.18);
-      border-radius: var(--radius); padding:20px;
-      box-shadow: var(--shadow);
-    }
-    .hero-card h3{margin:0 0 8px}
-    .hero-card ul{margin:0;padding-left:18px}
-    .hero-card li{margin:6px 0}
-
-    /* Sections */
-    section{padding:60px 0}
-    h2.section-title{
-      margin:0 0 18px; font-size: clamp(22px, 3vw, 34px)
-    }
-    .section-lead{color:var(--muted); margin:0 0 18px}
-
-    /* Services grid */
-    .services{
-      display:grid; grid-template-columns: repeat(3,minmax(0,1fr));
-      gap:16px;
-    }
-    .service{
-      background: rgba(0,0,0,.25);
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: var(--radius); padding:18px;
-    }
-    .service h3{margin:0 0 6px; font-size:1.05rem}
-    .service p{margin:0; color: var(--muted); font-size:.95rem}
-
-    /* Contact */
-    .contact-card{
-      display:grid; grid-template-columns: repeat(3,1fr); gap:16px;
-    }
-    .contact-item{
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.18);
-      border-radius: var(--radius); padding:18px;
-    }
-    .contact-item strong{display:block; margin-bottom:6px}
-    .contact-item a{font-weight:800}
-
-    /* Footer */
-    footer{
-      background: linear-gradient(0deg, rgba(0,0,0,.25), rgba(0,0,0,.0));
-      border-top: 1px solid rgba(255,255,255,.12);
-      padding:18px 0; text-align:center; color: var(--muted)
-    }
-
-    /* Mobile */
-    @media (max-width: 900px){
-      .hero-grid{grid-template-columns: 1fr}
-      .services{grid-template-columns: 1fr 1fr}
-      .contact-card{grid-template-columns: 1fr}
-    }
-    @media (max-width: 560px){
-      .services{grid-template-columns: 1fr}
-      .brand .name{display:none}
-      .call-chip{display:block; margin:12px 0 0 0; width:max-content}
-    }
-  </style>
-
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header aria-label="Top Navigation">
@@ -200,20 +41,17 @@
         </div>
       </div>
 
-```
-  <nav aria-label="Utility">
-    <div class="lang-switch" title="Language">
-      <span style="font-weight:700">🌐</span>
-      <label for="lang" class="sr-only">Language</label>
-      <select id="lang" aria-label="Language selector">
-        <option value="en">English</option>
-        <option value="es">Español</option>
-      </select>
+      <nav aria-label="Utility">
+        <div class="lang-switch" title="Language">
+          <span style="font-weight:700">🌐</span>
+          <label for="lang" class="sr-only">Language</label>
+          <select id="lang" aria-label="Language selector">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+          </select>
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
-```
-
   </header>
 
   <main>
@@ -238,90 +76,87 @@
           </div>
         </div>
 
-```
-    <aside class="hero-card" aria-label="Contact quick card">
-      <h3 data-i18n="need_help">Need electrical help?</h3>
-      <ul>
-        <li data-i18n="hero_b1">Fast troubleshooting & repairs</li>
-        <li data-i18n="hero_b2">Lighting automation & smart controls</li>
-        <li data-i18n="hero_b3">Panel, wiring & circuit upgrades</li>
-      </ul>
-      <p style="margin-top:12px">
-        <a class="cta" href="mailto:melaor@gmail.com" aria-label="Email Ecosmart Electric">
-          ✉️ <span data-i18n="email_us">Email us</span>
-        </a>
-      </p>
-    </aside>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <h2 class="section-title" data-i18n="about_title">About Us</h2>
-    <p class="section-lead" data-i18n="about_body">
-      Ecosmart Electric serves commercial and residential clients with reliable, code-compliant electrical work. We focus on safe installations, clear communication, and energy-smart solutions with professional expertise you can trust.
-    </p>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" aria-labelledby="services-title">
-  <div class="container">
-    <h2 id="services-title" class="section-title" data-i18n="services_title">Services</h2>
-    <p class="section-lead" data-i18n="services_lead">Core electrical services we provide:</p>
-    <div class="services" role="list">
-      <article class="service" role="listitem">
-        <h3 data-i18n="svc1_t">New Installations</h3>
-        <p data-i18n="svc1_d">Circuits, outlets, lighting, and dedicated lines.</p>
-      </article>
-      <article class="service" role="listitem">
-        <h3 data-i18n="svc2_t">Repairs & Troubleshooting</h3>
-        <p data-i18n="svc2_d">Fault finding, breakers, GFCI/AFCI issues, safety fixes.</p>
-      </article>
-      <article class="service" role="listitem">
-        <h3 data-i18n="svc3_t">Wiring & Panel Upgrades</h3>
-        <p data-i18n="svc3_d">Service panels, sub-panels, load balancing, rewiring.</p>
-      </article>
-      <article class="service" role="listitem">
-        <h3 data-i18n="svc4_t">Lighting Automation</h3>
-        <p data-i18n="svc4_d">Smart switches, occupancy sensors, schedules & scenes.</p>
-      </article>
-      <article class="service" role="listitem">
-        <h3 data-i18n="svc5_t">Outdoor & Pole Lighting</h3>
-        <p data-i18n="svc5_d">Security lights, parking/pole lighting, landscape.</p>
-      </article>
-      <article class="service" role="listitem">
-        <h3 data-i18n="svc6_t">EV & Specialty</h3>
-        <p data-i18n="svc6_d">EV chargers, appliances, dedicated circuits & more.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" aria-labelledby="contact-title">
-  <div class="container">
-    <h2 id="contact-title" class="section-title" data-i18n="contact_title">Contact</h2>
-    <p class="section-lead" data-i18n="contact_lead">Get in touch for a quote or fast service.</p>
-    <div class="contact-card">
-      <div class="contact-item">
-        <strong data-i18n="phone_label">Phone</strong>
-        <a href="tel:+17867786654" aria-label="Call 786-778-6654">786-778-6654</a>
+        <aside class="hero-card" aria-label="Contact quick card">
+          <h3 data-i18n="need_help">Need electrical help?</h3>
+          <ul>
+            <li data-i18n="hero_b1">Fast troubleshooting & repairs</li>
+            <li data-i18n="hero_b2">Lighting automation & smart controls</li>
+            <li data-i18n="hero_b3">Panel, wiring & circuit upgrades</li>
+          </ul>
+          <p style="margin-top:12px">
+            <a class="cta" href="mailto:melaor@gmail.com" aria-label="Email Ecosmart Electric">
+              ✉️ <span data-i18n="email_us">Email us</span>
+            </a>
+          </p>
+        </aside>
       </div>
-      <div class="contact-item">
-        <strong data-i18n="email_label">Email</strong>
-        <a href="mailto:melaor@gmail.com">melaor@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <strong data-i18n="address_label">Address / Service Area</strong>
-        <span data-i18n="address_value">Miami, Florida</span>
-      </div>
-    </div>
-  </div>
-</section>
-```
+    </section>
 
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title" data-i18n="about_title">About Us</h2>
+        <p class="section-lead" data-i18n="about_body">
+          Ecosmart Electric serves commercial and residential clients with reliable, code-compliant electrical work. We focus on safe installations, clear communication, and energy-smart solutions with professional expertise you can trust.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title" class="section-title" data-i18n="services_title">Services</h2>
+        <p class="section-lead" data-i18n="services_lead">Core electrical services we provide:</p>
+        <div class="services" role="list">
+          <article class="service" role="listitem">
+            <h3 data-i18n="svc1_t">New Installations</h3>
+            <p data-i18n="svc1_d">Circuits, outlets, lighting, and dedicated lines.</p>
+          </article>
+          <article class="service" role="listitem">
+            <h3 data-i18n="svc2_t">Repairs & Troubleshooting</h3>
+            <p data-i18n="svc2_d">Fault finding, breakers, GFCI/AFCI issues, safety fixes.</p>
+          </article>
+          <article class="service" role="listitem">
+            <h3 data-i18n="svc3_t">Wiring & Panel Upgrades</h3>
+            <p data-i18n="svc3_d">Service panels, sub-panels, load balancing, rewiring.</p>
+          </article>
+          <article class="service" role="listitem">
+            <h3 data-i18n="svc4_t">Lighting Automation</h3>
+            <p data-i18n="svc4_d">Smart switches, occupancy sensors, schedules & scenes.</p>
+          </article>
+          <article class="service" role="listitem">
+            <h3 data-i18n="svc5_t">Outdoor & Pole Lighting</h3>
+            <p data-i18n="svc5_d">Security lights, parking/pole lighting, landscape.</p>
+          </article>
+          <article class="service" role="listitem">
+            <h3 data-i18n="svc6_t">EV & Specialty</h3>
+            <p data-i18n="svc6_d">EV chargers, appliances, dedicated circuits & more.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title" data-i18n="contact_title">Contact</h2>
+        <p class="section-lead" data-i18n="contact_lead">Get in touch for a quote or fast service.</p>
+        <div class="contact-card">
+          <div class="contact-item">
+            <strong data-i18n="phone_label">Phone</strong>
+            <a href="tel:+17867786654" aria-label="Call 786-778-6654">786-778-6654</a>
+          </div>
+          <div class="contact-item">
+            <strong data-i18n="email_label">Email</strong>
+            <a href="mailto:melaor@gmail.com">melaor@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong data-i18n="address_label">Address / Service Area</strong>
+            <span data-i18n="address_value">Miami, Florida</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer role="contentinfo">
@@ -332,114 +167,7 @@
     </div>
   </footer>
 
-  <!-- Language + small helpers -->
-
-  <script>
-    // Text translations
-    const T = {
-      en: {
-        hero_title: "Ecosmart Electric · Commercial & Residential",
-        hero_subtitle: "Qualified Electrician — New installations, repairs & lighting automation",
-        call_now: "Call Now",
-        licensed: "Licensed & insured",
-        residential: "Residential",
-        need_help: "Need electrical help?",
-        hero_b1: "Fast troubleshooting & repairs",
-        hero_b2: "Lighting automation & smart controls",
-        hero_b3: "Panel, wiring & circuit upgrades",
-        email_us: "Email us",
-        about_title: "About Us",
-        about_body: "Ecosmart Electric serves commercial and residential clients with reliable, code-compliant electrical work. We focus on safe installations, clear communication, and energy-smart solutions with professional expertise you can trust.",
-        services_title: "Services",
-        services_lead: "Core electrical services we provide:",
-        svc1_t: "New Installations",
-        svc1_d: "Circuits, outlets, lighting, and dedicated lines.",
-        svc2_t: "Repairs & Troubleshooting",
-        svc2_d: "Fault finding, breakers, GFCI/AFCI issues, safety fixes.",
-        svc3_t: "Wiring & Panel Upgrades",
-        svc3_d: "Service panels, sub-panels, load balancing, rewiring.",
-        svc4_t: "Lighting Automation",
-        svc4_d: "Smart switches, occupancy sensors, schedules & scenes.",
-        svc5_t: "Outdoor & Pole Lighting",
-        svc5_d: "Security lights, parking/pole lighting, landscape.",
-        svc6_t: "EV & Specialty",
-        svc6_d: "EV chargers, appliances, dedicated circuits & more.",
-        contact_title: "Contact",
-        contact_lead: "Get in touch for a quote or fast service.",
-        phone_label: "Phone",
-        email_label: "Email",
-        address_label: "Address / Service Area",
-        address_value: "Miami, Florida",
-        copyright: "All rights reserved."
-      },
-      es: {
-        hero_title: "Ecosmart Electric · Comercial y Residencial",
-        hero_subtitle: "Electricista calificado — Instalaciones nuevas, reparaciones y automatización de iluminación",
-        call_now: "Llamar ahora",
-        licensed: "Licenciado y asegurado",
-        residential: "Residencial",
-        need_help: "¿Necesitas ayuda eléctrica?",
-        hero_b1: "Diagnóstico y reparaciones rápidas",
-        hero_b2: "Automatización de iluminación y controles inteligentes",
-        hero_b3: "Actualización de paneles, cableado y circuitos",
-        email_us: "Escríbenos",
-        about_title: "Quiénes somos",
-        about_body: "Ecosmart Electric atiende a clientes comerciales y residenciales con trabajo eléctrico confiable y conforme al código. Priorizamos instalaciones seguras, comunicación clara y soluciones eficientes en energía con experiencia profesional en la que puedes confiar.",
-        services_title: "Servicios",
-        services_lead: "Servicios eléctricos principales que ofrecemos:",
-        svc1_t: "Instalaciones nuevas",
-        svc1_d: "Circuitos, tomacorrientes, iluminación y líneas dedicadas.",
-        svc2_t: "Reparaciones y diagnóstico",
-        svc2_d: "Búsqueda de fallas, breakers, GFCI/AFCI y correcciones de seguridad.",
-        svc3_t: "Actualización de cableado y paneles",
-        svc3_d: "Paneles principales y secundarios, balance de carga y recableado.",
-        svc4_t: "Automatización de iluminación",
-        svc4_d: "Interruptores inteligentes, sensores y horarios/escenas.",
-        svc5_t: "Iluminación exterior y de postes",
-        svc5_d: "Luz de seguridad, estacionamientos y paisajismo.",
-        svc6_t: "EV y especiales",
-        svc6_d: "Cargadores de autos eléctricos, electrodomésticos y circuitos dedicados.",
-        contact_title: "Contacto",
-        contact_lead: "Contáctanos para una cotización o servicio rápido.",
-        phone_label: "Teléfono",
-        email_label: "Correo",
-        address_label: "Dirección / Área de servicio",
-        address_value: "Miami, Florida",
-        copyright: "Todos los derechos reservados."
-      }
-    };
-
-    // Apply a language pack to all [data-i18n] nodes
-    function applyLang(lang){
-      const dict = T[lang] || T.en;
-      document.querySelectorAll("[data-i18n]").forEach(el=>{
-        const key = el.getAttribute("data-i18n");
-        if(dict[key] !== undefined){ el.textContent = dict[key]; }
-      });
-      document.documentElement.lang = (lang === "es" ? "es" : "en");
-      // Update CTA aria-label to keep it accessible in each language
-      const callBtn = document.querySelector(".cta[href^='tel:']");
-      if(callBtn){
-        callBtn.setAttribute("aria-label",
-          (lang==="es" ? "Llamar ahora 786-778-6654" : "Call now 786-778-6654")
-        );
-      }
-    }
-
-    // Init
-    const select = document.getElementById("lang");
-    select.addEventListener("change", e => applyLang(e.target.value));
-    applyLang((new URLSearchParams(location.search).get("lang")) || "en");
-
-    // Year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Small helper for screen-readers -->
-
-  <style>
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  </style>
-
+  <!-- External JavaScript -->
+  <script src="js/script.js"></script>
 </body>
 </html>
