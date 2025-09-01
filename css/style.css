@@ -50,7 +50,8 @@ header{
 
 .brand .name {
   font-size: 1.8rem; /* Increase font size */
-  font-weight: 800; /* Make text bold */
+  font-weight: 900; /* Make text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to the text */
 }
 
 .brand .name .accent {
