@@ -210,6 +210,11 @@ h2.section-title{
   background: #f9f9f9; /* Light gray background for service cards */
   border: 1px solid rgba(0, 0, 0, 0.1); /* Adjust border for better visibility */
   border-radius: var(--radius); padding:18px;
+  box-shadow: var(--shadow); /* Add shadow for consistency */
+  background: var(--white); /* Match background with other sections */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Add border for consistency */
+  border-radius: var(--radius); /* Add border radius for consistency */
+  padding: 24px; /* Add padding for better spacing */
 }
 .service h3{margin:0 0 6px; font-size:1.05rem}
 .service p{margin:0; color: var(--blue); font-size:.95rem}
