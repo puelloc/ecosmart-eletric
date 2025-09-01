@@ -89,7 +89,7 @@ header{
   text-shadow: 0 2px 0 rgba(0,0,0,.15);
   color: white;
 }
-.subtitle{font-size: clamp(16px, 2.3vw, 22px); color: var(--muted)}
+.subtitle{font-size: clamp(16px, 2.3vw, 22px); color: var(--blue)}
 .cta{
   display:inline-flex; align-items:center; gap:10px; margin-top:22px;
   background: linear-gradient(135deg,var(--green),var(--green-dark));
@@ -157,7 +157,7 @@ header{
 
 .areas-info p {
   margin-bottom: 16px;
-  color: var(--muted);
+  color: var(--blue);
 }
 
 .areas-list {
@@ -199,7 +199,7 @@ section{padding:60px 0}
 h2.section-title{
   margin:0 0 18px; font-size: clamp(22px, 3vw, 34px)
 }
-.section-lead{color:var(--muted); margin:0 0 18px}
+.section-lead{color:var(--blue); margin:0 0 18px}
 
 /* Services grid */
 .services{
@@ -212,7 +212,7 @@ h2.section-title{
   border-radius: var(--radius); padding:18px;
 }
 .service h3{margin:0 0 6px; font-size:1.05rem}
-.service p{margin:0; color: var(--muted); font-size:.95rem}
+.service p{margin:0; color: var(--blue); font-size:.95rem}
 
 /* Contact */
 .contact-card{
@@ -231,7 +231,7 @@ footer{
   background: var(--background); /* Change footer background to white */
   color: var(--ink); /* Adjust text color for better contrast */
   border-top: 1px solid rgba(255,255,255,.12);
-  padding:18px 0; text-align:center; color: var(--muted)
+  padding:18px 0; text-align:center; color: var(--blue)
 }
 
 /* Screen reader only class */
