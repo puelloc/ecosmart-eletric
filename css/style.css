@@ -131,6 +131,66 @@ header{
   color: white;
 }
 
+/* Areas We Serve */
+.areas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch; /* Ensure both columns stretch to the same height */
+}
+
+.areas-info, .areas-map {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.areas-info h2 {
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+  color: var(--blue-dark);
+}
+
+.areas-info p {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.areas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.areas-list li {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: var(--radius);
+  background: rgba(122, 217, 87, 0.1);
+  color: var(--ink);
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.areas-list li:hover {
+  background: var(--green);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.areas-list .highlight {
+  background: var(--green);
+  color: var(--white);
+}
+
+.areas-map iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 /* Sections */
 section{padding:60px 0}
 h2.section-title{
