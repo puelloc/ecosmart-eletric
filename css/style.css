@@ -8,7 +8,7 @@
   --text:#eaf6ff;
   --muted:#cfe7ff;
   --white:#fff;
-  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  --shadow: 0 10px 30px rgba(0,0,0,.1);
   --radius: 18px;
   --background: #fff; /* New variable for white background */
 }
