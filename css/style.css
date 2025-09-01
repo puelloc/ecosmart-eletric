@@ -201,6 +201,22 @@ h2.section-title{
 }
 .section-lead{color:var(--blue); margin:0 0 18px}
 
+/* Services header */
+.services-header {
+  align-items: center;
+
+}
+
+.services-header .section-title {
+  margin: 0;
+  font-size: clamp(22px, 3vw, 34px);
+}
+
+.services-header .section-lead {
+  color: var(--blue);
+  font-size: 1rem;
+}
+
 /* Services grid */
 .services{
   display:grid; grid-template-columns: repeat(3,minmax(0,1fr));
