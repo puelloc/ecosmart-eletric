@@ -138,12 +138,14 @@ header{
   gap: 24px;
   align-items: stretch; /* Ensure both columns stretch to the same height */
 }
+.areas-info {
+  padding: 20px;
+}
 
 .areas-info, .areas-map {
   background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius);
-  padding: 20px;
   box-shadow: var(--shadow);
 }
 
@@ -189,6 +191,7 @@ header{
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  padding: 0px;
 }
 
 /* Sections */
