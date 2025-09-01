@@ -48,6 +48,19 @@ header{
   display:flex; align-items:center; gap:14px; font-weight:800; letter-spacing:.5px
 }
 
+.brand .name {
+  font-size: 1.8rem; /* Increase font size */
+  font-weight: 800; /* Make text bold */
+}
+
+.brand .name .accent {
+  color: var(--blue-dark); /* Apply dark blue color to "ECOSMART" */
+}
+
+.brand .name {
+  color: var(--green); /* Apply green color to "ELECTRIC" */
+}
+
 .lang-switch{
   display:flex; align-items:center; gap:8px;
   background: var(--muted);
