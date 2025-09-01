@@ -50,14 +50,13 @@ header{
 
 .lang-switch{
   display:flex; align-items:center; gap:8px;
-  background: rgba(0,0,0,.2);
-  border:1px solid rgba(255,255,255,.12);
+  background: var(--muted);
+  border: 1px solid var(--blue-dark);
   border-radius: 12px;
   padding:6px 10px;
 }
 .lang-switch select{
-  appearance:none; background:transparent; color:var(--white);
-  border:none; font-weight:600; cursor:pointer;
+  appearance:none; background:transparent; color:var(--ink); font-weight: 600;
 }
 
 /* Hero */
@@ -107,8 +106,13 @@ header{
 
 .badge-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
 .badge{
-  background: rgba(0,0,0,.25); border: 1px solid rgba(255,255,255,.14);
-  padding:6px 10px; border-radius:999px; font-weight:700; font-size:.9rem
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.14);
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:.9rem;
+  color: white;
 }
 
 .hero-card{
@@ -117,9 +121,15 @@ header{
   border-radius: var(--radius); padding:20px;
   box-shadow: var(--shadow);
 }
-.hero-card h3{margin:0 0 8px}
-.hero-card ul{margin:0;padding-left:18px}
-.hero-card li{margin:6px 0}
+.hero-card h3{
+  margin:0 0 8px;
+  color: white;
+}
+.hero-card ul{margin:0;padding-left:18px;}
+.hero-card li{
+  margin:6px 0;
+  color: white;
+}
 
 /* Sections */
 section{padding:60px 0}
