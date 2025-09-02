@@ -230,17 +230,19 @@ header {
   transition: transform .08s ease-in-out;
 }
 
-/* Add new styles for hero-specific CTA buttons */
+/* Updated styles for hero-specific CTA buttons */
 .hero .cta {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+  display: inline-flex; /* Call button doesn't need to fill container */
+  width: auto; /* Call button doesn't need to fill container */
+  justify-content: center; /* Center text in button */
 }
 
 .hero-card .cta {
-  display: flex;
+  display: flex; /* Email button should fill container */
   width: 100%;
-  justify-content: center;
+  justify-content: center; /* Center text in button */
+  padding-left: 20px; /* Adjust padding to center properly with icon */
+  padding-right: 20px; /* Balance padding on both sides */
 }
 
 .call-chip {
