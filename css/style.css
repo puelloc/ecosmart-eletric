@@ -34,7 +34,7 @@ header{
   backdrop-filter: blur(6px);
 }
 .topbar{
-  display:flex; align-items:center; justify-content:center;
+  display:flex; align-items:center; justify-content:space-between;
   gap:32px; padding:12px 0; width: 100%;
 }
 .topbar .logo img {
@@ -46,7 +46,6 @@ header{
 
 .brand{
   display:flex; align-items:center; gap:14px; font-weight:800; letter-spacing:.5px;
-  flex-shrink: 0;
 }
 
 .brand .name {
@@ -333,7 +332,6 @@ footer{
   margin: 0;
   padding: 0;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .nav-links a {
