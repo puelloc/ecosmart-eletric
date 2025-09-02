@@ -40,7 +40,7 @@ function applyLang(lang) {
   const callBtn = document.querySelector(".cta[href^='tel:']");
   if (callBtn) {
     callBtn.setAttribute("aria-label",
-      (lang === "es" ? "Llamar ahora 786-778-6654" : "Call now 786-778-6654")
+      (lang === "es" ? "Llamar ahora 111-111-1111" : "Call now 111-111-1111")
     );
   }
 }
