@@ -250,15 +250,25 @@ header{
   transition: background 0.2s ease, transform 0.1s ease;
 }
 
+/* Remove the hover effect from non-highlighted list items */
 .areas-list li:hover {
-  background: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
+  transform: none; /* Remove the transform effect */
+  background: rgba(122, 217, 87, 0.1); /* Keep the original background */
+  color: var(--ink); /* Keep the original text color */
 }
 
 .areas-list .highlight {
   background: var(--green);
   color: var(--white);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Preserve hover effects only for the highlighted item */
+.areas-list .highlight:hover {
+  background: var(--green);
+  color: var(--white);
+  transform: translateY(-2px);
 }
 
 .areas-map iframe {
