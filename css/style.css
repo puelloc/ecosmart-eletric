@@ -315,10 +315,11 @@ h2.section-title{
 
 /* Footer */
 footer{
-  background: var(--background); /* Change footer background to white */
-  color: var(--ink); /* Adjust text color for better contrast */
-  border-top: 1px solid rgba(255,255,255,.12);
-  padding:18px 0; text-align:center; color: var(--blue)
+  background: var(--blue-dark); /* Dark blue background */
+  color: var(--white); /* White text */
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 18px 0;
+  text-align: center;
 }
 
 /* Screen reader only class */
