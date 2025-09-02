@@ -10,174 +10,208 @@
 
   <!-- Schema.org: LocalBusiness (Electrician) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Electrician",
-    "name": "Ecosmart Electric",
-    "image": "",
-    "telephone": "+1-000-000-0000",
-    "email": "mailto:mail@mail.com",
-    "areaServed": "Miami, FL",
-    "url": "https://your-github-username.github.io/ecosmart-electric",
-    "description": "Commercial and residential electrical services: new installations, repairs, wiring & panel upgrades, lighting automation, outdoor & pole lighting, troubleshooting. Licensed and insured."
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Ecosmart Electric",
+      "image": "",
+      "telephone": "+1-000-000-0000",
+      "email": "mailto:mail@mail.com",
+      "areaServed": "Miami, FL",
+      "url": "https://your-github-username.github.io/ecosmart-electric",
+      "description": "Commercial and residential electrical services: new installations, repairs, wiring & panel upgrades, lighting automation, outdoor & pole lighting, troubleshooting. Licensed and insured."
+    }
   </script>
 
   <!-- External CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header aria-label="Top Navigation">
-    <div class="container topbar">
-      <div class="brand" aria-label="Brand">
-        <div class="logo" aria-hidden="true">
-          <img src="images/logo.svg" alt="Ecosmart Electric logo" />
-        </div>
-        <div class="name">
-          <span class="accent">ECOSMART</span> ELECTRIC
-        </div>
+<header aria-label="Top Navigation">
+  <div class="container topbar">
+    <div class="brand" aria-label="Brand">
+      <div class="logo" aria-hidden="true">
+        <img src="images/logo.svg" alt="Ecosmart Electric logo" />
       </div>
-      <nav aria-label="Utility">
-        <!-- Added navigation links -->
-        <ul class="nav-links">
-          <li><a href="#services" aria-label="Go to Services section">Services</a></li>
-          <li><a href="#areas-we-serve" aria-label="Go to Areas We Serve section">Areas We Serve</a></li>
-          <li><a href="#home" aria-label="Go to Contact section">Contact</a></li>
-          <li><div class="lang-switch" title="Language">
-            <span style="font-weight:700">🌐</span>
-            <span class="lang-display">Language</span>
-            <select id="lang" aria-label="Language selector">
-              <option value="en">English</option>
-              <option value="es">Español</option>
-            </select>
-          </div></li>
-        </ul>
-
-      </nav>
+      <div class="name">
+        <span class="accent">ECOSMART</span> ELECTRIC
+      </div>
     </div>
-  </header>
-
-
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <h1 data-i18n="hero_title">
-            Ecosmart Electric
-          </h1>
-          <p class="subtitle" data-i18n="hero_subtitle">
-            Qualified Electrician — New installations, repairs & lighting automation
-          </p>
-          <a class="cta" href="tel:+17867786654" aria-label="Call now 000-000-0000">
-            ⚡ <span data-i18n="call_now">Call Now</span>
-            <span class="call-chip">📞 000-000-0000</span>
-          </a>
-          <div class="badge-row" aria-label="Highlights">
-            <span class="badge" data-i18n="licensed">Licensed & insured</span>
-            <span class="badge">Commercial</span>
-            <span class="badge" data-i18n="residential">Residential</span>
+    <nav aria-label="Utility">
+      <!-- Added navigation links -->
+      <ul class="nav-links">
+        <li><a href="#services" aria-label="Go to Services section">Services</a></li>
+        <li><a href="#areas-we-serve" aria-label="Go to Areas We Serve section">Areas We Serve</a></li>
+        <li><a href="#home" aria-label="Go to Contact section">Contact</a></li>
+        <li><div class="lang-switch" title="Language" onclick="toggleLanguageDropdown(this)">
+          <span style="font-weight:700">🌐</span>
+          <span class="lang-display">Language</span>
+          <div class="lang-dropdown">
+            <div class="lang-option active" onclick="selectLanguage('en', 'English')">English</div>
+            <div class="lang-option" onclick="selectLanguage('es', 'Español')">Español</div>
           </div>
-        </div>
+        </div></li>
+      </ul>
 
-        <aside class="hero-card" aria-label="Contact quick card">
-          <h3 data-i18n="need_help">Need electrical help?</h3>
-          <ul>
-            <li data-i18n="hero_b1">Fast troubleshooting & repairs</li>
-            <li data-i18n="hero_b2">Lighting automation & smart controls</li>
-            <li data-i18n="hero_b3">Panel, wiring & circuit upgrades</li>
-          </ul>
-          <p style="margin-top:12px">
-            <a class="cta" href="mailto:mail@mail.com" aria-label="Email Ecosmart Electric">
-              ✉️ <span data-i18n="email_us">Email us</span>
-            </a>
-          </p>
-        </aside>
-      </div>
-    </section>
+    </nav>
+  </div>
+</header>
 
-    <!-- SERVICES -->
-    <section id="services" aria-labelledby="services-title">
-      <div class="container">
-        <div class="services-header">
-          <h2 id="services-title" class="section-title" data-i18n="services_title">Services</h2>
-          <p class="section-lead" data-i18n="services_lead">Core electrical services we provide:</p>
-        </div>
-        <div class="services" role="list">
-          <article class="service" role="listitem">
-            <h3 data-i18n="svc1_t">New Installations</h3>
-            <p data-i18n="svc1_d">Circuits, outlets, lighting, and dedicated lines.</p>
-          </article>
-          <article class="service" role="listitem">
-            <h3 data-i18n="svc2_t">Repairs & Troubleshooting</h3>
-            <p data-i18n="svc2_d">Fault finding, breakers, GFCI/AFCI issues, safety fixes.</p>
-          </article>
-          <article class="service" role="listitem">
-            <h3 data-i18n="svc3_t">Wiring & Panel Upgrades</h3>
-            <p data-i18n="svc3_d">Service panels, sub-panels, load balancing, rewiring.</p>
-          </article>
-          <article class="service" role="listitem">
-            <h3 data-i18n="svc4_t">Lighting Automation</h3>
-            <p data-i18n="svc4_d">Smart switches, occupancy sensors, schedules & scenes.</p>
-          </article>
-          <article class="service" role="listitem">
-            <h3 data-i18n="svc5_t">Outdoor & Pole Lighting</h3>
-            <p data-i18n="svc5_d">Security lights, parking/pole lighting, landscape.</p>
-          </article>
-          <article class="service" role="listitem">
-            <h3 data-i18n="svc6_t">EV & Specialty</h3>
-            <p data-i18n="svc6_d">EV chargers, appliances, dedicated circuits & more.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- AREAS WE SERVE -->
-    <section id="areas-we-serve" aria-labelledby="areas-title">
-      <div class="container">
-        <div class="services-header">
-          <h2 id="areas-title" class="section-title">Areas We Serve</h2>
-          <p class="section-lead" >Our team offers services in the following neighborhoods</p>
-        </div>
-        <div class="areas-grid">
-          <div class="areas-info">
-            <ul class="areas-list">
-              <li>Hollywood</li>
-              <li>Homestead</li>
-              <li>Coral Gables</li>
-              <li class="highlight">Miami</li>
-              <li>Key Biscayne</li>
-              <li>Hialeah</li>
-              <li>Palmetto</li>
-              <li>More...</li>
-            </ul>
-          </div>
-          <div class="areas-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230325.0956829542!2d-80.43442759022214!3d25.761111569853618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
-              width="100%"
-              height="450"
-              style="border:0; border-radius: 12px;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Service areas map">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="container">
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
       <div>
-        © <span id="year"></span> <strong>Ecosmart Electric</strong> · <span data-i18n="copyright">All rights reserved.</span>
+        <h1 data-i18n="hero_title">
+          Ecosmart Electric
+        </h1>
+        <p class="subtitle" data-i18n="hero_subtitle">
+          Qualified Electrician — New installations, repairs & lighting automation
+        </p>
+        <a class="cta" href="tel:+17867786654" aria-label="Call now 000-000-0000">
+          ⚡ <span data-i18n="call_now">Call Now</span>
+          <span class="call-chip">📞 000-000-0000</span>
+        </a>
+        <div class="badge-row" aria-label="Highlights">
+          <span class="badge" data-i18n="licensed">Licensed & insured</span>
+          <span class="badge">Commercial</span>
+          <span class="badge" data-i18n="residential">Residential</span>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Contact quick card">
+        <h3 data-i18n="need_help">Need electrical help?</h3>
+        <ul>
+          <li data-i18n="hero_b1">Fast troubleshooting & repairs</li>
+          <li data-i18n="hero_b2">Lighting automation & smart controls</li>
+          <li data-i18n="hero_b3">Panel, wiring & circuit upgrades</li>
+        </ul>
+        <p style="margin-top:12px">
+          <a class="cta" href="mailto:mail@mail.com" aria-label="Email Ecosmart Electric">
+            ✉️ <span data-i18n="email_us">Email us</span>
+          </a>
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="services-header">
+        <h2 id="services-title" class="section-title" data-i18n="services_title">Services</h2>
+        <p class="section-lead" data-i18n="services_lead">Core electrical services we provide:</p>
+      </div>
+      <div class="services" role="list">
+        <article class="service" role="listitem">
+          <h3 data-i18n="svc1_t">New Installations</h3>
+          <p data-i18n="svc1_d">Circuits, outlets, lighting, and dedicated lines.</p>
+        </article>
+        <article class="service" role="listitem">
+          <h3 data-i18n="svc2_t">Repairs & Troubleshooting</h3>
+          <p data-i18n="svc2_d">Fault finding, breakers, GFCI/AFCI issues, safety fixes.</p>
+        </article>
+        <article class="service" role="listitem">
+          <h3 data-i18n="svc3_t">Wiring & Panel Upgrades</h3>
+          <p data-i18n="svc3_d">Service panels, sub-panels, load balancing, rewiring.</p>
+        </article>
+        <article class="service" role="listitem">
+          <h3 data-i18n="svc4_t">Lighting Automation</h3>
+          <p data-i18n="svc4_d">Smart switches, occupancy sensors, schedules & scenes.</p>
+        </article>
+        <article class="service" role="listitem">
+          <h3 data-i18n="svc5_t">Outdoor & Pole Lighting</h3>
+          <p data-i18n="svc5_d">Security lights, parking/pole lighting, landscape.</p>
+        </article>
+        <article class="service" role="listitem">
+          <h3 data-i18n="svc6_t">EV & Specialty</h3>
+          <p data-i18n="svc6_d">EV chargers, appliances, dedicated circuits & more.</p>
+        </article>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- External JavaScript -->
-  <script src="js/script.js"></script>
+  <!-- AREAS WE SERVE -->
+  <section id="areas-we-serve" aria-labelledby="areas-title">
+    <div class="container">
+      <div class="services-header">
+        <h2 id="areas-title" class="section-title">Areas We Serve</h2>
+        <p class="section-lead" >Our team offers services in the following neighborhoods</p>
+      </div>
+      <div class="areas-grid">
+        <div class="areas-info">
+          <ul class="areas-list">
+            <li>Hollywood</li>
+            <li>Homestead</li>
+            <li>Coral Gables</li>
+            <li class="highlight">Miami</li>
+            <li>Key Biscayne</li>
+            <li>Hialeah</li>
+            <li>Palmetto</li>
+            <li>More...</li>
+          </ul>
+        </div>
+        <div class="areas-map">
+          <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230325.0956829542!2d-80.43442759022214!3d25.761111569853618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
+                  width="100%"
+                  height="450"
+                  style="border:0; border-radius: 12px;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Service areas map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div>
+      © <span id="year"></span> <strong>Ecosmart Electric</strong> · <span data-i18n="copyright">All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="js/script.js"></script>
+<script>
+  function toggleLanguageDropdown(element) {
+      event.stopPropagation();
+      element.classList.toggle('active');
+  }
+
+  function selectLanguage(code, name) {
+      event.stopPropagation();
+      const langSwitch = document.querySelector('.lang-switch');
+      const langDisplay = langSwitch.querySelector('.lang-display');
+      const options = langSwitch.querySelectorAll('.lang-option');
+
+      // Update display text
+      langDisplay.textContent = name;
+
+      // Update active option
+      options.forEach(option => option.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Close dropdown
+      langSwitch.classList.remove('active');
+
+      // Here you can add language switching logic
+      console.log('Selected language:', code, name);
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+      const langSwitch = document.querySelector('.lang-switch');
+      if (!langSwitch.contains(event.target)) {
+          langSwitch.classList.remove('active');
+      }
+  });
+</script>
 </body>
 </html>
