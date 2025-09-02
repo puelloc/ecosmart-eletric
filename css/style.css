@@ -81,6 +81,7 @@ header{
 }
 .lang-switch .lang-display{
   font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to match header text */
 }
 .lang-dropdown {
   position: absolute;
@@ -360,6 +361,7 @@ footer{
   padding: 8px 12px;
   border-radius: var(--radius);
   transition: background 0.2s ease, color 0.2s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to match header text */
 }
 
 .nav-links a:hover {
