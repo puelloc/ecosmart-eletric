@@ -65,13 +65,24 @@ header{
 
 .lang-switch{
   display:flex; align-items:center; gap:8px;
-  background: var(--muted);
-  border: 1px solid var(--blue-dark);
-  border-radius: 12px;
-  padding:6px 10px;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  transition: background 0.2s ease, color 0.2s ease;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.lang-switch:hover{
+  background: var(--green);
+  color: var(--white);
 }
 .lang-switch select{
-  appearance:none; background:transparent; color:var(--ink); font-weight: 600;
+  appearance:none; background:transparent; color:inherit; font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
 
 /* Hero */
