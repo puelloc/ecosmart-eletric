@@ -604,8 +604,13 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  /* Updated: Keep the brand name visible but make it smaller */
   .brand .name {
-    display: none
+    font-size: 1rem;
+  }
+
+  .brand .name .accent {
+    display: inline; /* Ensure the accent part is displayed */
   }
 
   .call-chip {
