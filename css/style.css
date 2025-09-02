@@ -622,7 +622,7 @@ footer {
     width: max-content
   }
 
-  /* Updated: Make brand and company name larger on mobile */
+  /* Updated: Make brand and company name larger on mobile but keep on single line */
   .brand {
     flex: 1; /* Take available space */
     justify-content: flex-start; /* Align to the left */
@@ -630,10 +630,9 @@ footer {
   }
 
   .brand .name {
-    font-size: 1.5rem; /* Larger than before (was 1rem) */
-    display: flex;
-    flex-direction: column; /* Stack the words for better fit */
-    line-height: 1.1;
+    font-size: 1.4rem; /* Adjusted size for single line */
+    white-space: nowrap; /* Prevent wrapping to multiple lines */
+    line-height: 1.2;
   }
 
   .topbar .logo img {
@@ -644,7 +643,7 @@ footer {
 /* Extra small devices */
 @media (max-width: 375px) {
   .brand .name {
-    font-size: 1.3rem; /* Even smaller for very small devices */
+    font-size: 1.2rem; /* Smaller for very small devices but still single line */
   }
 
   .topbar .logo img {
