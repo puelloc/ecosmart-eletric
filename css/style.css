@@ -562,42 +562,34 @@ footer {
     justify-content: space-between; /* Ensure proper spacing */
   }
 
-  .topbar .nav-links {
+  /* Hide specific nav links on mobile, keep language switcher */
+  .nav-links li:not(:last-child) {
     display: none;
-    position: absolute;
-    top: var(--header-height);
-    left: 0;
-    width: 100%;
-    background: white;
-    box-shadow: var(--shadow);
-    flex-direction: column;
-    align-items: stretch;
-    transition: all 0.3s ease-in-out;
   }
 
-  .topbar .nav-links.active {
+  .topbar .nav-links {
     display: flex;
-  }
-
-  .nav-links a,
-  .lang-switch {
-    width: 100%;
-    text-align: left;
-    padding: 15px 20px;
-  }
-
-  .lang-switch .lang-dropdown {
     position: static;
-    box-shadow: none;
+    width: auto;
     background: transparent;
+    box-shadow: none;
+    flex-direction: row;
+    align-items: center;
   }
 
-  /* Hamburger menu icon */
+  /* Hide text in language button on mobile, show only symbol */
+  .lang-switch .lang-display {
+    display: none;
+  }
+
+  .lang-switch {
+    padding: 8px;
+    min-width: auto;
+  }
+
+  /* Remove hamburger menu as it's no longer needed */
   .hamburger-menu {
-    display: block;
-    cursor: pointer;
-    font-size: var(--hamburger-size);
-    line-height: 1;
+    display: none;
   }
 
   /* Sticky CTA at the bottom for mobile */
