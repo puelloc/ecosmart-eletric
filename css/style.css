@@ -198,6 +198,10 @@ header{
 }
 
 /* Areas We Serve */
+#areas-we-serve {
+  background: #f4faff; /* Light blue background for the whole section */
+}
+
 .areas-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -209,7 +213,6 @@ header{
 }
 
 .areas-info, .areas-map {
-  background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
