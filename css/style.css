@@ -232,8 +232,8 @@ header {
 
 /* Updated styles for hero-specific CTA buttons */
 .hero .cta {
-  display: inline-flex; /* Call button doesn't need to fill container */
-  width: auto; /* Call button doesn't need to fill container */
+  display: inline-flex; /* Call button doesn't need to fill container on desktop */
+  width: auto; /* Call button doesn't need to fill container on desktop */
   justify-content: center; /* Center text in button */
 }
 
@@ -648,6 +648,22 @@ footer {
 
   .topbar .logo img {
     height: 50px; /* Slightly smaller logo on mobile */
+  }
+
+  /* Make both hero CTA buttons full-width on mobile */
+  .hero .cta {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Adjust call chip appearance for full-width button */
+  .call-chip {
+    display: inline-flex;
+    margin: 0 0 0 auto; /* Push to the right side */
+    width: auto;
   }
 }
 
