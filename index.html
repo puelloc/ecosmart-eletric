@@ -40,17 +40,19 @@
     <nav aria-label="Utility">
       <!-- Added navigation links -->
       <ul class="nav-links">
-        <li><a href="#services" aria-label="Go to Services section">Services</a></li>
-        <li><a href="#areas-we-serve" aria-label="Go to Areas We Serve section">Areas We Serve</a></li>
-        <li><a href="#home" aria-label="Go to Contact section">Contact</a></li>
-        <li><div class="lang-switch" title="Language" onclick="toggleLanguageDropdown(this)">
-          <span style="font-weight:700">🌐</span>
-          <span class="lang-display">Language</span>
-          <div class="lang-dropdown">
-            <div class="lang-option active" onclick="selectLanguage('en', 'English')">English</div>
-            <div class="lang-option" onclick="selectLanguage('es', 'Español')">Español</div>
+        <li><a href="#services" aria-label="Go to Services section" data-i18n="nav_services">Services</a></li>
+        <li><a href="#areas-we-serve" aria-label="Go to Areas We Serve section" data-i18n="nav_areas">Areas We Serve</a></li>
+        <li><a href="#home" aria-label="Go to Contact section" data-i18n="nav_contact">Contact</a></li>
+        <li>
+          <div class="lang-switch" title="Language" onclick="toggleLanguageDropdown(this)">
+            <span style="font-weight:700">🌐</span>
+            <span class="lang-display">Language</span>
+            <div class="lang-dropdown">
+              <div class="lang-option active" onclick="selectLanguage('en', 'English')">English</div>
+              <div class="lang-option" onclick="selectLanguage('es', 'Español')">Español</div>
+            </div>
           </div>
-        </div></li>
+        </li>
       </ul>
 
     </nav>
@@ -201,8 +203,10 @@
       // Close dropdown
       langSwitch.classList.remove('active');
 
-      // Here you can add language switching logic
-      console.log('Selected language:', code, name);
+      // Use main language switching logic
+      if (typeof applyLang === "function") {
+        applyLang(code);
+      }
   }
 
   // Close dropdown when clicking outside

@@ -31,6 +31,8 @@
   "email_label": "Correo",
   "address_label": "Dirección / Área de servicio",
   "address_value": "Miami, Florida",
-  "copyright": "Todos los derechos reservados."
+  "copyright": "Todos los derechos reservados.",
+  "nav_services": "Servicios",
+  "nav_areas": "Zonas de servicio",
+  "nav_contact": "Contacto"
 }
-
