@@ -230,8 +230,17 @@ header {
   transition: transform .08s ease-in-out;
 }
 
-.cta:hover {
-  transform: translateY(-2px)
+/* Add new styles for hero-specific CTA buttons */
+.hero .cta {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.hero-card .cta {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .call-chip {
@@ -617,9 +626,9 @@ footer {
   }
 
   .call-chip {
-    display: block;
-    margin: 12px 0 0 0;
-    width: max-content
+    display: inline-flex; /* Changed from block to inline-flex */
+    margin: 0 0 0 10px; /* Restore original margin */
+    width: auto; /* Remove fixed width constraint */
   }
 
   /* Updated: Make brand and company name larger on mobile but keep on single line */
