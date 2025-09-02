@@ -372,6 +372,23 @@ footer{
   padding: 15px;
 }
 
+/* Updated styling for section headers and leads */
+.section-title {
+  color: var(--blue-dark);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.section-lead {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--blue);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
 /* Mobile */
 @media (max-width: 900px){
   .hero-grid{grid-template-columns: 1fr}
