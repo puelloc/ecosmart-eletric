@@ -202,6 +202,11 @@ header{
   background: #f4faff; /* Light blue background for the whole section */
 }
 
+/* Services section container specific styles */
+#areas-we-serve .container {
+  padding: 15px;
+}
+
 .areas-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -350,6 +355,11 @@ footer{
 .nav-links a:hover {
   background: var(--green);
   color: var(--white);
+}
+
+/* Services section container specific styles */
+#services .container {
+  padding: 15px;
 }
 
 /* Mobile */
