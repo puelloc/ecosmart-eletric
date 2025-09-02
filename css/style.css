@@ -83,12 +83,14 @@ header {
   gap: 14px;
   font-weight: 800;
   letter-spacing: .5px;
+  flex: 1; /* Make brand take available space */
 }
 
 .brand .name {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Increased from 1.8rem */
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 .brand .name .accent {
@@ -546,6 +548,7 @@ footer {
     padding: 12px 20px;
     position: relative;
     height: var(--header-height);
+    justify-content: space-between; /* Ensure proper spacing */
   }
 
   .topbar .nav-links {
@@ -617,5 +620,34 @@ footer {
     display: block;
     margin: 12px 0 0 0;
     width: max-content
+  }
+
+  /* Updated: Make brand and company name larger on mobile */
+  .brand {
+    flex: 1; /* Take available space */
+    justify-content: flex-start; /* Align to the left */
+    gap: 10px; /* Reduce gap on mobile */
+  }
+
+  .brand .name {
+    font-size: 1.5rem; /* Larger than before (was 1rem) */
+    display: flex;
+    flex-direction: column; /* Stack the words for better fit */
+    line-height: 1.1;
+  }
+
+  .topbar .logo img {
+    height: 50px; /* Slightly smaller logo on mobile */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .brand .name {
+    font-size: 1.3rem; /* Even smaller for very small devices */
+  }
+
+  .topbar .logo img {
+    height: 45px; /* Further reduced logo size */
   }
 }
