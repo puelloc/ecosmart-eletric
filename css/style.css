@@ -27,6 +27,17 @@ body {
   padding: 0;
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal scroll */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* This pushes footer to the bottom */
+  display: flex;
+  flex-direction: column;
 }
 
 body {
