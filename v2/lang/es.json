@@ -1,0 +1,53 @@
+{
+  "nav_home": "Inicio",
+  "nav_services": "Servicios",
+  "nav_faq": "Preguntas",
+  "nav_contact": "Contacto",
+
+  "hero_title": "Bienvenidos a Ecosmart Electric",
+  "hero_subtitle": "Servicios Eléctricos Sostenibles y de Alta Calidad",
+  "hero_intro": "Proveemos soluciones eléctricas residenciales y comerciales con licencia y seguro en Miami y alrededores.",
+  "hero_mission": "Nuestra misión es ofrecer un servicio excepcional con trabajo eficiente y conforme al código que protege tu hogar o negocio.",
+  "call_now": "Llamar Ahora",
+  "licensed": "Licenciado y asegurado",
+  "commercial": "Comercial",
+  "residential": "Residencial",
+  "cta_email": "Escríbenos",
+
+  "services_title": "Nuestros Servicios",
+  "services_lead": "Soluciones principales para hogares y negocios:",
+  "svc_install_title": "Instalaciones Eléctricas",
+  "svc_install_desc": "Cableado seguro y eficiente & nuevos circuitos para remodelaciones y obras.",
+  "svc_maint_title": "Mantenimiento y Reparaciones",
+  "svc_maint_desc": "Diagnóstico, paneles, breakers, tomacorrientes y correcciones de seguridad.",
+  "svc_led_title": "Iluminación LED & Inteligente",
+  "svc_led_desc": "Actualizaciones LED modernas y eficientes interiores y exteriores + automatización.",
+
+  "faq_title": "Preguntas Frecuentes",
+  "faq_q1": "¿Qué servicios eléctricos ofrecen?",
+  "faq_a1": "Realizamos instalaciones, reparaciones, mantenimiento, mejoras LED, paneles y cableado, permisos y más.",
+  "faq_q2": "¿Cómo son ecológicos sus servicios?",
+  "faq_a2": "Promovemos eficiencia energética con LED, controles inteligentes, diseño de carga adecuado y materiales sostenibles cuando es posible.",
+  "faq_q3": "¿Ofrecen garantía?",
+  "faq_a3": "Sí. Todo el trabajo está respaldado por garantía de mano de obra y estándares conforme al código.",
+
+  "testimonial_quote": "Ecosmart Electric transformó nuestra iluminación — menor consumo, mejor ambiente y servicio profesional.",
+  "testimonial_author": "María González",
+
+  "contact_title": "Contáctanos",
+  "contact_lead": "Solicita una cotización, inspección o ayuda de emergencia:",
+  "form_name": "Nombre",
+  "form_email": "Correo",
+  "form_message": "Mensaje",
+  "form_submit": "Enviar",
+
+  "location_title": "Ubicación",
+  "location_value": "Miami, Florida, Estados Unidos",
+
+  "share_title": "Compartir",
+  "about_title": "Sobre Nosotros",
+  "about_body": "Ecosmart Electric ofrece servicios eléctricos confiables y conformes al código con enfoque en sostenibilidad. Desde modernizaciones hasta diagnóstico, nuestros técnicos licenciados priorizan seguridad, claridad y rendimiento a largo plazo.",
+
+  "footer_rights": "Todos los derechos reservados."
+}
+
