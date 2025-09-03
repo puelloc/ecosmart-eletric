@@ -24,7 +24,8 @@
 html,
 body {
   margin: 0;
-  padding: 0
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 body {
@@ -32,6 +33,8 @@ body {
   color: var(--ink);
   background: var(--background);
   line-height: 1.55;
+  width: 100%;
+  max-width: 100vw; /* Ensure body doesn't exceed viewport */
 }
 
 a {
@@ -49,7 +52,8 @@ button:focus {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px
+  padding: 0 20px;
+  width: 100%; /* Ensure container respects parent width */
 }
 
 header {
@@ -59,6 +63,7 @@ header {
   background: var(--background);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6px);
+  width: 100%;
 }
 
 .topbar {
@@ -68,6 +73,7 @@ header {
   gap: 32px;
   padding: 12px 0;
   width: 100%;
+  min-width: 0; /* Allow flex items to shrink */
 }
 
 .topbar .logo img {
@@ -84,6 +90,7 @@ header {
   font-weight: 800;
   letter-spacing: .5px;
   flex: 1; /* Make brand take available space */
+  min-width: 0; /* Allow brand to shrink */
 }
 
 .brand .name {
@@ -91,6 +98,7 @@ header {
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   white-space: nowrap; /* Prevent wrapping */
+  min-width: 0; /* Allow text to shrink */
 }
 
 .brand .name .accent {
@@ -129,8 +137,7 @@ header {
 .lang-dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
+  right: 0; /* Changed from left: 0 to right: 0 */
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius);
@@ -183,6 +190,7 @@ header {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .hero::before {
@@ -200,6 +208,7 @@ header {
   grid-template-columns: 1.3fr 1fr;
   gap: 36px;
   align-items: center;
+  width: 100%;
 }
 
 .hero h1 {
@@ -228,6 +237,8 @@ header {
   border-radius: 999px;
   box-shadow: var(--shadow);
   transition: transform .08s ease-in-out;
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box;
 }
 
 /* Updated styles for hero-specific CTA buttons */
@@ -253,7 +264,9 @@ header {
   border: 1px solid rgba(255, 255, 255, .22);
   padding: 8px 12px;
   border-radius: 999px;
-  color: var(--white)
+  color: var(--white);
+  white-space: nowrap; /* Prevent wrapping */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .badge-row {
@@ -279,6 +292,8 @@ header {
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--shadow);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-card h3 {
@@ -381,7 +396,9 @@ header {
 
 /* Sections */
 section {
-  padding: 60px 0
+  padding: 60px 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 h2.section-title {
@@ -470,6 +487,7 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding: 18px 0;
   text-align: center;
+  width: 100%;
 }
 
 /* Screen reader only class */
@@ -493,6 +511,7 @@ footer {
   margin: 0;
   padding: 0;
   align-items: center;
+  flex-shrink: 0; /* Prevent nav from shrinking too much */
 }
 
 .nav-links a {
@@ -553,13 +572,24 @@ footer {
 }
 
 @media (max-width: 560px) {
+  /* Ensure no horizontal overflow on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 15px; /* Reduce padding for more space */
+    max-width: 100%;
+  }
 
   /* Mobile-first approach for navigation */
   .topbar {
-    padding: 12px 20px;
+    padding: 12px 0; /* Remove horizontal padding, let container handle it */
     position: relative;
     height: var(--header-height);
-    justify-content: space-between; /* Ensure proper spacing */
+    justify-content: space-between;
+    gap: 12px; /* Reduce gap */
+    flex-wrap: nowrap; /* Prevent wrapping */
   }
 
   /* Hide specific nav links on mobile, keep language switcher */
@@ -575,6 +605,8 @@ footer {
     box-shadow: none;
     flex-direction: row;
     align-items: center;
+    flex-shrink: 0;
+    gap: 12px;
   }
 
   /* Hide text in language button on mobile, show only symbol */
@@ -585,6 +617,14 @@ footer {
   .lang-switch {
     padding: 8px;
     min-width: auto;
+    flex-shrink: 0;
+  }
+
+  /* Mobile-specific dropdown positioning */
+  .lang-dropdown {
+    right: 0; /* Ensure it stays aligned to the right edge */
+    left: auto; /* Override any left positioning */
+    min-width: 100px; /* Slightly smaller on mobile */
   }
 
   /* Remove hamburger menu as it's no longer needed */
@@ -610,62 +650,121 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  /* Updated: Keep the brand name visible but make it smaller */
+  /* Updated: Keep the brand name visible but make it smaller and ensure it fits */
+  .brand {
+    flex: 1;
+    min-width: 0; /* Allow brand to shrink */
+    justify-content: flex-start;
+    gap: 8px; /* Reduce gap on mobile */
+  }
+
   .brand .name {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Smaller font size for mobile */
+    white-space: nowrap;
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis if needed */
+    max-width: 100%; /* Respect container width */
   }
 
   .brand .name .accent {
     display: inline; /* Ensure the accent part is displayed */
   }
 
-  .call-chip {
-    display: inline-flex; /* Changed from block to inline-flex */
-    margin: 0 0 0 10px; /* Restore original margin */
-    width: auto; /* Remove fixed width constraint */
-  }
-
-  /* Updated: Make brand and company name larger on mobile but keep on single line */
-  .brand {
-    flex: 1; /* Take available space */
-    justify-content: flex-start; /* Align to the left */
-    gap: 10px; /* Reduce gap on mobile */
-  }
-
-  .brand .name {
-    font-size: 1.4rem; /* Adjusted size for single line */
-    white-space: nowrap; /* Prevent wrapping to multiple lines */
-    line-height: 1.2;
-  }
-
   .topbar .logo img {
-    height: 50px; /* Slightly smaller logo on mobile */
+    height: 45px; /* Smaller logo on mobile */
+    flex-shrink: 0; /* Prevent logo from shrinking */
   }
 
-  /* Make both hero CTA buttons full-width on mobile */
+  /* Hero section mobile fixes */
+  .hero {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center full-width section */
+    padding: 40px 0;
+  }
+
+  .hero .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .hero-grid {
+    gap: 24px;
+    width: 100%;
+  }
+
+  /* Make both hero CTA buttons responsive on mobile */
   .hero .cta {
     display: flex;
     width: 100%;
     justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 14px 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
   }
 
-  /* Adjust call chip appearance for full-width button */
+  .hero-card .cta {
+    width: 100%;
+  }
+
+  /* Adjust call chip appearance for mobile */
   .call-chip {
     display: inline-flex;
-    margin: 0 0 0 auto; /* Push to the right side */
-    width: auto;
+    margin: 0 0 0 8px; /* Reduce margin */
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 0; /* Allow shrinking if needed */
+    font-size: 0.9rem; /* Slightly smaller font */
+  }
+
+  /* Ensure hero card doesn't overflow */
+  .hero-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px; /* Reduce padding on mobile */
+  }
+
+  /* Section spacing adjustments for mobile */
+  section {
+    padding: 40px 0;
+    width: 100%;
+  }
+
+  /* Ensure all grid containers don't overflow */
+  .services,
+  .contact-card,
+  .areas-grid {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
 /* Extra small devices */
 @media (max-width: 375px) {
+  .container {
+    padding: 0 12px; /* Even smaller padding for tiny screens */
+  }
+
   .brand .name {
-    font-size: 1.2rem; /* Smaller for very small devices but still single line */
+    font-size: 1rem; /* Smaller for very small devices */
   }
 
   .topbar .logo img {
-    height: 45px; /* Further reduced logo size */
+    height: 40px; /* Further reduced logo size */
+  }
+
+  .topbar {
+    gap: 8px; /* Further reduce gap */
+  }
+
+  .hero .cta {
+    font-size: 0.9rem; /* Smaller button text */
+    padding: 12px 16px; /* Reduce button padding */
+  }
+
+  .call-chip {
+    padding: 6px 10px; /* Smaller chip */
+    font-size: 0.8rem;
   }
 }
