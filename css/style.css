@@ -311,6 +311,34 @@ header {
   color: white;
 }
 
+/* Hero section updated styles */
+.hero-content {
+  width: 100%;
+}
+
+.hero-description {
+  color: var(--text);
+  margin: 15px 0 20px;
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.6;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-description p {
+  margin: 0;
+}
+
+.hero-card-description {
+  color: var(--text);
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 /* Areas We Serve */
 #areas-we-serve {
   background: #f4faff;
@@ -737,6 +765,34 @@ footer {
   .areas-grid {
     width: 100%;
     max-width: 100%;
+  }
+
+  /* Hero section updated styles */
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-description {
+    color: var(--text);
+    margin: 15px 0 20px;
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.6;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-description p {
+    margin: 0;
+  }
+
+  .hero-card-description {
+    color: var(--text);
+    margin: 0 0 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
 
