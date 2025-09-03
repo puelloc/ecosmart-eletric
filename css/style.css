@@ -38,6 +38,8 @@ main {
   flex: 1; /* This pushes footer to the bottom */
   display: flex;
   flex-direction: column;
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+
 }
 
 body {
@@ -233,7 +235,6 @@ header {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
   min-height: 70vh;
   align-items: center;
   padding: 10px 0;
