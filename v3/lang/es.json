@@ -1,0 +1,84 @@
+{
+  "title": "Ecosmart Electric",
+  "header": {
+    "title": "Ecosmart Electric services"
+  },
+  "menu": {
+    "home": "Inicio",
+    "services": "Nuestros Servicios",
+    "projects": "Proyectos Anteriores",
+    "contact": "Contacto"
+  },
+  "welcome": {
+    "title": "Bienvenidos a Ecosmart Electric",
+    "description": "En Ecosmart Electric, ofrecemos soluciones eléctricas sostenibles y de alta calidad para nuestros clientes. Nuestra misión es proporcionar un servicio excepcional a un precio ecológico, garantizando la satisfacción total de nuestros clientes, planos licesia y seguros de ley."
+  },
+  "expertise": {
+    "title": "Expertos en Nuevos Proyectos, Reparaciones y Modernizaciones Eléctricas",
+    "description": "En Ecosmart Electric, nos especializamos en ofrecer soluciones eléctricas sostenibles y de alta calidad para satisfacer todas tus necesidades. Ya sea que estés iniciando nuevos proyectos, necesites reparaciones inmediatas o busques modernizar tu sistema eléctrico, nuestro equipo de expertos está aquí para ayudarte. Nuestra misión es proporcionar un servicio excepcional a un precio ecológico, asegurando la máxima satisfacción de nuestros clientes con cada proyecto que emprendemos."
+  },
+  "services": {
+    "title": "Servicios",
+    "electrical_installations": {
+      "title": "Instalaciones eléctricas",
+      "description": "Instalaciones seguras y sostenibles para cualquier proyecto"
+    },
+    "electrical_maintenance": {
+      "title": "Mantenimiento eléctrico",
+      "description": "Mantenimiento preventivo y correctivo para sistemas eléctricos"
+    },
+    "led_lighting": {
+      "title": "Iluminación LED",
+      "description": "Iluminación LED eficiente que embellece y ahorra"
+    },
+    "button_text": "Más información"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "questions": {
+      "q1": {
+        "question": "¿Qué servicios eléctricos ofrecen?",
+        "answer": "Ofrecemos una amplia gama de servicios, incluyendo nuevas instalaciones eléctricas, mantenimiento y reparaciones eléctricas, nuevos proyectos y sistemas de iluminación LED modernas, luces de escalones y embutidas en techos, permisos planos, licecia y seguros."
+      },
+      "q2": {
+        "question": "¿Cómo contribuyen sus servicios al medio ambiente?",
+        "answer": "Nuestros servicios están diseñados para ser lo más ecológicos posible, utilizando materiales sostenibles y promoviendo el ahorro energético a través de tecnologías eficientes."
+      },
+      "q3": {
+        "question": "¿Ofrecen garantía en sus servicios?",
+        "answer": "Sí, todos nuestros servicios están respaldados por una garantía de satisfacción, asegurando la calidad y durabilidad de nuestro trabajo."
+      }
+    }
+  },
+  "testimonial": {
+    "quote": "Ecosmart Electric transformó completamente la iluminación de mi hogar, mejorando la eficiencia energética y reduciendo mis costos. Su profesionalismo y atención al detalle fueron excepcionales.",
+    "author": "María González"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Para servicios y consultas, contáctanos",
+    "form": {
+      "name": "Nombre",
+      "email": "Dirección de correo electrónico",
+      "message": "Mensaje",
+      "captcha": "Dejar este campo vacío",
+      "submit": "Enviar formulario"
+    }
+  },
+  "location": {
+    "title": "Ubicación",
+    "address": "Ecosmart Electric\nMiami, Florida, Estados Unidos"
+  },
+  "about": {
+    "title": "Sobre nosotros",
+    "description": "Ecosmart Electric es líder en servicios eléctricos en Miami, Florida, especializándose en ofrecer soluciones sostenibles y eficientes. Con años de experiencia, nuestro equipo está comprometido a proporcionar la mejor calidad de servicio, asegurando que cada proyecto se complete con la mayor atención al detalle. Creemos en hacer una diferencia en nuestro planeta y en las vidas de nuestros clientes, ofreciendo soluciones que no solo son efectivas sino también amigables con el medio ambiente."
+  },
+  "cta": {
+    "contact_us": "Contáctanos hoy"
+  },
+  "footer": {
+    "copyright": "© 2024 - 2025 Ecosmat Electric",
+    "powered_by": "Con la tecnología de Webador"
+  }
+}
+

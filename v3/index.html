@@ -20,7 +20,43 @@
             window.JOUWWEB.websiteRendering = {"locale":"es-ES","timezone":"America\/New_York","routes":{"api\/upload\/product-field":"\/_api\/upload\/product-field","checkout\/cart":"\/cart","payment":"\/complete-order\/:publicOrderId","payment\/forward":"\/complete-order\/:publicOrderId\/forward","public-order":"\/order\/:publicOrderId","checkout\/authorize":"\/cart\/authorize\/:gateway","wishlist":"\/wishlist"}};
                                                 window.JOUWWEB.website = {"id":4999475,"locale":"es-ES","enabled":true,"title":"Ecosmat Electric","hasTitle":true,"roleOfLoggedInUser":null,"ownerLocale":"es-US","plan":null,"freeWebsiteDomain":"webadorsite.com","backendKey":"webador-com-es","currency":"USD","defaultLocale":"es-ES","url":"https:\/\/gratis-4999475.webadorsite.com\/","homepageSegmentId":20893676,"category":"website","isOffline":false,"isPublished":true,"locales":[],"allowed":{"ads":true,"credits":false,"externalLinks":true,"slideshow":true,"customDefaultSlideshow":true,"hostedAlbums":false,"moderators":false,"mailboxQuota":0,"statisticsVisitors":true,"statisticsDetailed":false,"statisticsMonths":0,"favicon":false,"password":false,"freeDomains":0,"freeMailAccounts":0,"canUseLanguages":false,"fileUpload":false,"legacyFontSize":false,"webshop":false,"products":-1,"imageText":false,"search":false,"audioUpload":false,"videoUpload":0,"allowDangerousForms":false,"allowHtmlCode":false,"mobileBar":false,"sidebar":false,"poll":false,"allowCustomForms":false,"allowBusinessListing":false,"allowCustomAnalytics":false,"allowAccountingLink":false,"digitalProducts":false,"sitemapElement":false},"mobileBar":{"enabled":false,"theme":"accent","email":{"active":true},"location":{"active":true},"phone":{"active":true},"whatsapp":{"active":false},"social":{"active":false,"network":"facebook"}},"webshop":{"enabled":false,"currency":"USD","taxEnabled":false,"taxInclusive":false,"vatDisclaimerVisible":false,"orderNotice":null,"orderConfirmation":null,"freeShipping":false,"freeShippingAmount":"0.00","shippingDisclaimerVisible":false,"pickupAllowed":false,"couponAllowed":false,"detailsPageAvailable":true,"socialMediaVisible":false,"termsPage":null,"termsPageUrl":null,"extraTerms":null,"pricingVisible":true,"orderButtonVisible":true,"shippingAdvanced":false,"shippingAdvancedBackEnd":false,"soldOutVisible":true,"backInStockNotificationEnabled":true,"canAddProducts":true,"nextOrderNumber":1,"allowedServicePoints":[],"sendcloudConfigured":false,"sendcloudFallbackPublicKey":"a3d50033a59b4a598f1d7ce7e72aafdf","taxExemptionAllowed":false,"invoiceComment":null,"emptyCartVisible":true,"minimumOrderPrice":null,"productNumbersEnabled":false,"wishlistEnabled":true,"hideTaxOnCart":true},"isTreatedAsWebshop":false};                            window.JOUWWEB.cart = {"products":[],"coupon":null,"shippingCountryCode":null,"shippingChoice":null,"breakdown":[]};                            window.JOUWWEB.scripts = [];                        window.parent.JOUWWEB.colorPalette = window.JOUWWEB.colorPalette;
     </script>
-    <title>Ecosmat Electric</title>
+    <title data-i18n="title">Ecosmat Electric</title>
+    <!-- Added i18next for internationalization -->
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            i18next
+                .use(i18nextBrowserLanguageDetector)
+                .use(i18nextHttpBackend)
+                .init({
+                    fallbackLng: 'es',
+                    debug: false,
+                    backend: {
+                        loadPath: './lang/{{lng}}.json'
+                    }
+                }, function(err, t) {
+                    localize();
+                });
+        });
+
+        function localize() {
+            document.querySelectorAll('[data-i18n]').forEach(function(element) {
+                const key = element.getAttribute('data-i18n');
+                const translation = i18next.t(key);
+                if (translation) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translation;
+                    } else {
+                        element.innerHTML = translation;
+                    }
+                }
+            });
+        }
+    </script>
+    <!-- End of i18next scripts -->
     <link href="https://assets.jwwb.nl/assets/brand/webador/icon/favicon.png?bust=2299e1307cbb69076146" rel="shortcut icon">                                                <link href="https://assets.jwwb.nl/assets/brand/webador/icon/favicon.png?bust=2299e1307cbb69076146" rel="icon">                                        <meta property="og:image" content="https&#x3A;&#x2F;&#x2F;primary.jwwb.nl&#x2F;pexels&#x2F;88&#x2F;8827011.jpeg&#x3F;enable-io&#x3D;true&amp;enable&#x3D;upscale&amp;fit&#x3D;bounds&amp;width&#x3D;1200">
     <meta property="og:image" content="https&#x3A;&#x2F;&#x2F;primary.jwwb.nl&#x2F;pexels&#x2F;16&#x2F;1668860.jpeg&#x3F;enable-io&#x3D;true&amp;enable&#x3D;upscale&amp;fit&#x3D;bounds&amp;width&#x3D;1200">
     <meta property="og:image" content="https&#x3A;&#x2F;&#x2F;primary.jwwb.nl&#x2F;public&#x2F;m&#x2F;s&#x2F;t&#x2F;temp-xswnggqhstzxfboyqkks&#x2F;img_20240520_224947_257-high-ailwr5.jpg&#x3F;enable-io&#x3D;true&amp;enable&#x3D;upscale&amp;fit&#x3D;bounds&amp;width&#x3D;1200">
@@ -89,10 +125,9 @@
                             class="jw-header jw-header-title-container jw-header-text jw-header-text-toggle"
                             data-stylable="true"
                     >
-                        <h1        id="jw-header-title"
-                                   class="jw-header-title"
-                        >
-                            <span style="font-size: 120%;">Ecosmart Electric services</span>    </h1>
+                        <h1 id="jw-header-title" class="jw-header-title">
+                            <span style="font-size: 120%;" data-i18n="header.title">Ecosmart Electric services</span>
+                        </h1>
                     </div>
                 </div>
                 <nav class="menu jw-menu-copy">
@@ -103,44 +138,43 @@
                         <li
                                 class="jw-menu-item jw-menu-is-active"
                         >
-                            <a        class="jw-menu-link js-active-menu-item"
-                                      href="/"                                            data-page-link-id="20893676"
+                            <a class="jw-menu-link js-active-menu-item"
+                               href="/"
+                               data-page-link-id="20893676"
                             >
-                <span class="">
-            Inicio        </span>
+                                <span class="" data-i18n="menu.home">Inicio</span>
                             </a>
                         </li>
                         <li
                                 class="jw-menu-item"
                         >
-                            <a        class="jw-menu-link"
-                                      href="/nuestros-servicios"                                            data-page-link-id="20893714"
+                            <a class="jw-menu-link"
+                               href="/nuestros-servicios"
+                               data-page-link-id="20893714"
                             >
-                <span class="">
-            Nuestros Servicios        </span>
+                                <span class="" data-i18n="menu.services">Nuestros Servicios</span>
                             </a>
                         </li>
                         <li
                                 class="jw-menu-item"
                         >
-                            <a        class="jw-menu-link"
-                                      href="/proyectos-anteriores"                                            data-page-link-id="20893715"
+                            <a class="jw-menu-link"
+                               href="/proyectos-anteriores"
+                               data-page-link-id="20893715"
                             >
-                <span class="">
-            Proyectos Anteriores        </span>
+                                <span class="" data-i18n="menu.projects">Proyectos Anteriores</span>
                             </a>
                         </li>
                         <li
                                 class="jw-menu-item"
                         >
-                            <a        class="jw-menu-link"
-                                      href="/contacto"                                            data-page-link-id="20893716"
+                            <a class="jw-menu-link"
+                               href="/contacto"
+                               data-page-link-id="20893716"
                             >
-                <span class="">
-            Contacto        </span>
+                                <span class="" data-i18n="menu.contact">Contacto</span>
                             </a>
                         </li>
-
                     </ul>
 
                     <script nonce="84f4f91424dcc69ea1186b2171d7c7ed" id="jw-mobile-menu-template" type="text/template">
@@ -235,19 +269,21 @@
                                     class="jw-tree-node jw-element jw-image-text jw-node-is-first-child"
                             >
                                 <div class="jw-element-imagetext-text">
-                                    <h1 class="jw-heading-130" style="text-align: center;"><span style="text-decoration: underline;"><strong>Bienvenidos a Ecosmart Electric</strong></span></h1>
-                                    <p style="text-align: center;">En Ecosmart Electric, ofrecemos soluciones el&eacute;ctricas sostenibles y de alta calidad para nuestros clientes. Nuestra misi&oacute;n es proporcionar un servicio excepcional a un precio ecol&oacute;gico, garantizando la satisfacci&oacute;n total de nuestros clientes, planos licesia y seguros de ley.</p>
+                                    <h1 class="jw-heading-130" style="text-align: center;"><span style="text-decoration: underline;"><strong data-i18n="welcome.title">Bienvenidos a Ecosmart Electric</strong></span></h1>
+                                    <p style="text-align: center;" data-i18n="welcome.description">En Ecosmart Electric, ofrecemos soluciones eléctricas sostenibles y de alta calidad para nuestros clientes. Nuestra misión es proporcionar un servicio excepcional a un precio ecológico, garantizando la satisfacción total de nuestros clientes, planos licesia y seguros de ley.</p>
                                     <p style="text-align: center;">&nbsp;</p>
-                                    <h3 class="jw-heading-70">Expertos en Nuevos Proyectos, Reparaciones y Modernizaciones El&eacute;ctricas</h3>
-                                    <p>En <strong>Ecosmart Electric</strong>, nos especializamos en ofrecer soluciones el&eacute;ctricas sostenibles y de alta calidad para satisfacer todas tus necesidades. Ya sea que est&eacute;s iniciando <strong>nuevos proyectos</strong>, necesites <strong>reparaciones</strong> inmediatas o busques <strong>modernizar</strong> tu sistema el&eacute;ctrico, nuestro equipo de expertos est&aacute; aqu&iacute; para ayudarte. Nuestra misi&oacute;n es proporcionar un servicio excepcional a un precio ecol&oacute;gico, asegurando la m&aacute;xima satisfacci&oacute;n de nuestros clientes con cada proyecto que emprendemos.</p>    </div>
-                            </div><div
+                                    <h3 class="jw-heading-70" data-i18n="expertise.title">Expertos en Nuevos Proyectos, Reparaciones y Modernizaciones Eléctricas</h3>
+                                    <p data-i18n="expertise.description">En <strong>Ecosmart Electric</strong>, nos especializamos en ofrecer soluciones eléctricas sostenibles y de alta calidad para satisfacer todas tus necesidades. Ya sea que estés iniciando <strong>nuevos proyectos</strong>, necesites <strong>reparaciones</strong> inmediatas o busques <strong>modernizar</strong> tu sistema eléctrico, nuestro equipo de expertos está aquí para ayudarte. Nuestra misión es proporcionar un servicio excepcional a un precio ecológico, asegurando la máxima satisfacción de nuestros clientes con cada proyecto que emprendemos.</p>    </div>
+                            </div>
+                            <div
                                 id="jw-element-315887120"
                                 data-jw-element-id="315887120"
                                 class="jw-tree-node jw-element jw-image-text"
-                        >
-                            <div class="jw-element-imagetext-text">
-                                <h1 class="jw-heading-130" style="text-align: center;">Servicios</h1>    </div>
-                        </div><div
+                            >
+                                <div class="jw-element-imagetext-text">
+                                    <h1 class="jw-heading-130" style="text-align: center;" data-i18n="services.title">Servicios</h1>
+                                </div>
+                            </div><div
                                 id="jw-element-315887121"
                                 data-jw-element-id="315887121"
                                 class="jw-tree-node jw-element jw-spacer"
@@ -301,14 +337,16 @@
                                     class="jw-tree-node jw-element jw-image-text"
                             >
                                 <div class="jw-element-imagetext-text">
-                                    <h3 class="jw-heading-70" style="text-align: center;">Instalaciones eléctricas</h3>    </div>
+                                    <h3 class="jw-heading-70" style="text-align: center;" data-i18n="services.electrical_installations.title">Instalaciones eléctricas</h3>
+                                </div>
                             </div><div
                                     id="jw-element-315887126"
                                     data-jw-element-id="315887126"
                                     class="jw-tree-node jw-element jw-image-text"
                             >
                                 <div class="jw-element-imagetext-text">
-                                    <p style="text-align: center;">Instalaciones seguras y sostenibles para cualquier proyecto</p><p></p>    </div>
+                                    <p style="text-align: center;" data-i18n="services.electrical_installations.description">Instalaciones seguras y sostenibles para cualquier proyecto</p><p></p>
+                                </div>
                             </div><div
                                     id="jw-element-315887127"
                                     data-jw-element-id="315887127"
@@ -319,8 +357,9 @@
                                             class="jw-element-content&#x20;jw-btn&#x20;jw-btn--size-default&#x20;jw-btn--style-flat&#x20;jw-btn--roundness-square"
                                             style=""
                                     >
-                                        <div class="jw-btn-caption">
-                                            Más información            </div>
+                                        <div class="jw-btn-caption" data-i18n="services.button_text">
+                                            Más información
+                                        </div>
                                     </a>
                                 </div>
                             </div></div><div
@@ -424,14 +463,16 @@
                         >
                             <div class="jw-element-imagetext-text">
                                 <h3 class="jw-heading-70" style="text-align: center;">Iluminación LED</h3>    </div>
-                        </div><div
+                                <h3 class="jw-heading-70" style="text-align: center;" data-i18n="services.led_lighting.title">Iluminación LED</h3>
+                            </div>
                                 id="jw-element-315887136"
                                 data-jw-element-id="315887136"
                                 class="jw-tree-node jw-element jw-image-text"
                         >
                             <div class="jw-element-imagetext-text">
                                 <p style="text-align: center;">Iluminación LED eficiente que embellece y ahorra</p><p></p>    </div>
-                        </div><div
+                                <p style="text-align: center;" data-i18n="services.led_lighting.description">Iluminación LED eficiente que embellece y ahorra</p><p></p>
+                            </div>
                                 id="jw-element-315887137"
                                 data-jw-element-id="315887137"
                                 class="jw-tree-node jw-element jw-button jw-node-is-last-child"
@@ -442,11 +483,12 @@
                                         style=""
                                 >
                                     <div class="jw-btn-caption">
-                                        Más información            </div>
-                                </a>
+                                    <div class="jw-btn-caption" data-i18n="services.button_text">
+                                        Más información
+                                    </div>
                             </div>
                         </div></div></div><div
-                                id="jw-element-315887139"
+                        </div></div><div
                                 data-jw-element-id="315887139"
                                 class="jw-tree-node jw-element jw-image-text"
                         >
@@ -696,7 +738,7 @@
                         Crea tu propia página web con <a href="https://es.webador.com/?utm_source=sites&amp;utm_medium=banner&amp;utm_content=text%2Btint&amp;utm_campaign=house%20banner%20webador" rel="nofollow">Webador</a>            </h3>
                 </div>
             </div>
-            </div></div></div>    </div>
+            </div></div>    </div>
         </main>
     </div>
     <footer class="block-footer">
