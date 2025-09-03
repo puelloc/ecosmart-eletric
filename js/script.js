@@ -58,7 +58,7 @@ async function init() {
 
   // Apply initial language (from URL parameter or default to English)
   const urlParams = new URLSearchParams(location.search);
-  const initialLang = urlParams.get("lang") || "en";
+  const initialLang = urlParams.get("lang") || "es";
   applyLang(initialLang);
 
   // Set the language selector to match
