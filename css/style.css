@@ -296,7 +296,7 @@ header {
     height: 400px; /* Fixed height for images */
     object-fit: cover; /* Cover the area, cropping if necessary */
     border-radius: 8px 8px 8px 8px; /* Rounded top corners */
-    margin-bottom: 20px; /* Space below image */
+    margin-bottom: 15px; /* Reduced space below image */
 }
 
 .service-item h3 {
@@ -515,15 +515,24 @@ footer strong {
   }
 
   /* Services Section on Tablets */
+  .services {
+    padding: 0;
+  }
+
   .services-columns {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px; /* Reduced gap between service items */
   }
 
   .service-item {
     width: 80%;
     max-width: 400px;
+    margin-bottom: 0; /* Remove extra bottom margin */
+  }
+
+  .title {
+    margin: 2px; /* Reduced margin below titles */
   }
 
   footer {
@@ -552,6 +561,24 @@ footer strong {
   /* Services Section Title on Small Mobile */
   .services .title {
       font-size: 2rem;
+      margin-bottom: 2px; /* Reduced margin */
+  }
+
+  .service-item .service-image {
+    margin-bottom: 10px; /* Smaller margin on mobile */
+  }
+
+  .service-item h3 {
+    margin-bottom: 5px; /* Reduced margin */
+  }
+
+  .service-item p {
+    margin-bottom: 10px; /* Reduced margin */
+  }
+
+  .service-more-btn {
+    padding: 10px 20px; /* Slightly smaller button */
+    margin-bottom: 10px; /* Reduced margin */
   }
 
   footer {
@@ -640,17 +667,23 @@ footer strong {
   /* Services Section on Mobile */
   .services .title {
       font-size: 2.2rem;
-      margin-bottom: 40px;
+      margin-bottom: 20px; /* Reduced from 40px */
   }
 
   .service-item {
       width: 95%;
+      margin-bottom: 15px; /* Added small margin between items */
   }
 
   .service-item p {
       height: auto; /* Allow description height to adjust to content */
-      min-height: 50px; /* Set a minimum height for alignment */
-      padding-bottom: 15px;
+      min-height: 40px; /* Reduced from 50px */
+      padding-bottom: 10px; /* Reduced from 15px */
+      margin-bottom: 5px; /* Added smaller margin */
+  }
+
+  .services-columns {
+    gap: 15px; /* Further reduced gap on mobile */
   }
 }
 
@@ -670,5 +703,31 @@ footer strong {
 
   .topbar {
     gap: 12px;
+  }
+
+  .services-columns {
+    gap: 10px; /* Minimal gap for very small screens */
+  }
+
+  .service-item {
+    margin-bottom: 10px; /* Smaller margin for very small screens */
+  }
+
+  .service-item .service-image {
+    margin-bottom: 8px; /* Even smaller margin */
+  }
+
+  .service-item h3 {
+    margin-bottom: 3px; /* Minimal margin */
+    font-size: 1.2em; /* Slightly smaller text */
+  }
+
+  .services .title {
+    margin-bottom: 15px; /* Consistent smaller title spacing */
+  }
+
+  .service-more-btn {
+    margin-bottom: 5px; /* Minimal margin */
+    padding: 8px 16px; /* Smaller button */
   }
 }
