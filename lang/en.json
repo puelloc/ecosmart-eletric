@@ -7,5 +7,12 @@
   "nav_services": "Services",
   "nav_areas": "Areas We Serve",
   "nav_contact": "Contact",
+  "services_title": "Services",
+  "electrical_installations_title": "Electrical Installations",
+  "electrical_installations_subtitle": "Safe and sustainable installations for any project",
+  "electrical_maintenance_title": "Electrical Maintenance",
+  "electrical_maintenance_subtitle": "Preventive and corrective maintenance for electrical systems",
+  "led_lighting_title": "LED Lighting",
+  "led_lighting_subtitle": "Efficient LED lighting that beautifies and saves",
   "copyright": "All rights reserved."
 }

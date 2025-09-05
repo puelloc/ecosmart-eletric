@@ -235,7 +235,6 @@ header {
 
 /* Hero Section */
 .hero {
-  min-height: 70vh;
   align-items: center;
   padding: 10px 0;
 }
