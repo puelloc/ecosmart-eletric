@@ -826,6 +826,11 @@ footer strong {
   height: 100%;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .contact-info h2 {
   color: var(--dark-green);
@@ -838,6 +843,8 @@ footer strong {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .contact-item {
