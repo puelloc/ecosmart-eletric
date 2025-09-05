@@ -75,3 +75,60 @@ async function init() {
 
 // Start the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
+
+// Project gallery scrolling
+document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.querySelector('.project-gallery');
+    const leftBtn = document.querySelector('.scroll-left');
+    const rightBtn = document.querySelector('.scroll-right');
+
+    // Set initial scroll buttons visibility
+    updateScrollButtonsVisibility();
+
+    if (leftBtn && rightBtn && gallery) {
+        leftBtn.addEventListener('click', () => {
+            gallery.scrollBy({ left: -340, behavior: 'smooth' });
+        });
+
+        rightBtn.addEventListener('click', () => {
+            gallery.scrollBy({ left: 340, behavior: 'smooth' });
+        });
+
+        // Update button visibility on scroll
+        gallery.addEventListener('scroll', updateScrollButtonsVisibility);
+    }
+
+    function updateScrollButtonsVisibility() {
+        if (gallery.scrollLeft <= 0) {
+            leftBtn.style.opacity = '0.4';
+            leftBtn.style.pointerEvents = 'none';
+        } else {
+            leftBtn.style.opacity = '0.9';
+            leftBtn.style.pointerEvents = 'auto';
+        }
+
+        if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 5) {
+            rightBtn.style.opacity = '0.4';
+            rightBtn.style.pointerEvents = 'none';
+        } else {
+            rightBtn.style.opacity = '0.9';
+            rightBtn.style.pointerEvents = 'auto';
+        }
+    }
+
+    // Handle touch scrolling for mobile
+    let startX;
+    let scrollLeft;
+
+    gallery.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].pageX - gallery.offsetLeft;
+        scrollLeft = gallery.scrollLeft;
+    }, { passive: true });
+
+    gallery.addEventListener('touchmove', (e) => {
+        if (!startX) return;
+        const x = e.touches[0].pageX - gallery.offsetLeft;
+        const walk = (x - startX);
+        gallery.scrollLeft = scrollLeft - walk;
+    }, { passive: true });
+});
