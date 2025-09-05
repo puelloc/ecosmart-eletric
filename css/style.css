@@ -738,13 +738,7 @@ footer strong {
   margin: 40px auto 0 auto;
   padding: 32px 0 32px 0;
 }
-.faq-title {
-  text-align: center;
-  color: var(--primary-green);
-  font-size: 2.2em;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
+
 .faq-list {
   display: flex;
   flex-direction: column;
