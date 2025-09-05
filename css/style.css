@@ -273,7 +273,7 @@ header {
 }
 
 .services .title {
-    color: #558b2f; /* Darker green for title */
+    color: var(--dark-green); /* Use site dark green */
     font-size: 2.5em;
     margin-bottom: 50px;
 }
@@ -297,21 +297,21 @@ header {
 
 .service-item .service-image {
     width: 100%;
-    height: 200px; /* Fixed height for images */
+    height: 400px; /* Fixed height for images */
     object-fit: cover; /* Cover the area, cropping if necessary */
-    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    border-radius: 8px 8px 8px 8px; /* Rounded top corners */
     margin-bottom: 20px; /* Space below image */
 }
 
 .service-item h3 {
-    color: #333; /* Dark gray for subtitles */
+    color: var(--dark-green); /* Use site dark green for subtitles */
     font-size: 1.3em;
     margin-bottom: 10px;
     padding: 0 15px; /* Padding for text */
 }
 
 .service-item p {
-    color: #555; /* Medium gray for descriptions */
+    color: var(--ink); /* Use site ink color for descriptions */
     font-size: 1em;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -323,8 +323,8 @@ header {
 }
 
 .service-more-btn {
-    background-color: #558b2f; /* Darker green for button */
-    color: #fff; /* White text */
+    background-color: var(--primary-green); /* Use site primary green for button */
+    color: var(--white); /* White text */
     border: none;
     border-radius: 5px;
     padding: 12px 25px;
@@ -336,7 +336,7 @@ header {
 }
 
 .service-more-btn:hover {
-    background-color: #457a24; /* Slightly darker green on hover */
+    background-color: var(--dark-green); /* Use site dark green on hover */
 }
 
 /* Footer styles */
