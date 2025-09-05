@@ -65,7 +65,7 @@ button:focus {
 
 /* Layout */
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 24px;
   width: 100%; /* Ensure container respects parent width */
@@ -237,10 +237,6 @@ header {
 .hero {
   align-items: center;
   padding: 10px 0;
-}
-
-.hero-grid {
-  max-width: 1000px;
 }
 
 .hero h1 {
