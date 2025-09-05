@@ -810,3 +810,203 @@ footer strong {
     font-size: 1em;
   }
 }
+
+/* Contact Section Styles */
+#contact-us {
+  padding: 60px 0;
+  background: var(--beige);
+  margin-top: 40px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+  height: 100%;
+}
+
+
+.contact-info h2 {
+  color: var(--dark-green);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-green);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contact-details h3 {
+  color: var(--dark-green);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-link {
+  color: var(--primary-green);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
+.contact-details p {
+  color: var(--ink);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Areas We Serve Styles */
+.areas-we-serve h2 {
+  color: var(--dark-green);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.map-container {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+}
+
+.location-info {
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.location-info h3 {
+  color: var(--dark-green);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.location-details p {
+  color: var(--ink);
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.location-details p:first-child {
+  font-size: 1.1rem;
+  color: var(--primary-green);
+}
+
+/* Contact Section Responsive Design */
+@media (max-width: 968px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-methods {
+    gap: 20px;
+  }
+
+  .contact-item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact-us {
+    padding: 40px 0;
+  }
+
+  .contact-container {
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .contact-info h2,
+  .areas-we-serve h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .contact-icon {
+    align-self: center;
+  }
+
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-item {
+    padding: 15px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .contact-details h3 {
+    font-size: 1.1rem;
+  }
+
+  .location-info {
+    padding: 20px;
+  }
+
+  .map-container iframe {
+    height: 200px;
+  }
+}
