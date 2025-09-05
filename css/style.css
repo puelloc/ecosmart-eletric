@@ -253,6 +253,10 @@ header {
   text-decoration-thickness: 3px;
 }
 
+.hero h3 {
+  text-align: center;
+}
+
 .hero-description {
   font-size: 1rem;
   color: #666;
@@ -967,6 +971,9 @@ footer strong {
   #contact-us {
     padding: 40px 0;
   }
+    .contact-info-title{
+      text-align: center;
+    }
 
   .contact-container {
     gap: 30px;
@@ -983,10 +990,19 @@ footer strong {
     flex-direction: column;
     text-align: center;
     gap: 15px;
+    align-items: center;
   }
 
   .contact-icon {
     align-self: center;
+  }
+
+  .contact-details {
+    text-align: center;
+  }
+
+  .contact-details h3 {
+    text-align: center;
   }
 
   .map-container iframe {
@@ -997,7 +1013,13 @@ footer strong {
 @media (max-width: 480px) {
   .contact-item {
     padding: 15px;
+    text-align: center;
+    align-items: center;
   }
+
+    .contact-info-title{
+      text-align: center;
+    }
 
   .contact-icon {
     width: 50px;
@@ -1005,8 +1027,19 @@ footer strong {
     font-size: 1.5rem;
   }
 
+  .contact-details {
+    text-align: center;
+    width: 100%;
+  }
+
   .contact-details h3 {
     font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .contact-link {
+    text-align: center;
+    display: block;
   }
 
   .location-info {
