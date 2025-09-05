@@ -24,10 +24,12 @@
   "faq_a2": "Nuestros servicios están diseñados para ser lo más ecológicos posible, utilizando materiales sostenibles y promoviendo el ahorro energético a través de tecnologías eficientes.",
   "faq_q3": "¿Ofrecen garantía en sus servicios?",
   "faq_a3": "Sí, todos nuestros servicios están respaldados por una garantía de satisfacción, asegurando la calidad y durabilidad de nuestro trabajo.",
-  "contact_info_title": "Contáctanos",
+  "contact_title": "Contáctanos",
+  "contact_info_title": "Modos de contacto",
   "contact_phone_title": "Lllámanos",
   "contact_text_title": "Envíanos un mensaje",
   "contact_email_title": "Envíanos un correo",
+  "areas_title": "Áreas que atendemos",
   "location_title": "Ubicación",
   "location_address": "Miami, Florida, Estados Unidos"
 }
