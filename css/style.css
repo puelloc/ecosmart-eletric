@@ -230,8 +230,10 @@ header {
 /* Global */
 .title {
   text-align: center;
+  color: var(--dark-green); /* Use site dark green */
+  font-size: 2.5em;
+  margin-bottom: 50px;
 }
-
 
 /* Hero Section */
 .hero {
@@ -270,12 +272,6 @@ header {
 .services {
     padding: 0px 0;
     text-align: center;
-}
-
-.services .title {
-    color: var(--dark-green); /* Use site dark green */
-    font-size: 2.5em;
-    margin-bottom: 50px;
 }
 
 .services-columns {
