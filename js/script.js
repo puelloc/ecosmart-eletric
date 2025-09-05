@@ -132,3 +132,37 @@ document.addEventListener('DOMContentLoaded', function() {
         gallery.scrollLeft = scrollLeft - walk;
     }, { passive: true });
 });
+
+// FAQ accordion logic
+function initFAQAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    questionBtn.addEventListener('click', function() {
+      // Close all items except the one clicked
+      faqItems.forEach(i => {
+        if (i !== item) {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          i.querySelector('.faq-icon').innerHTML = '&#x25BC;';
+        }
+      });
+      // Toggle the clicked item
+      const isOpen = item.classList.contains('open');
+      if (isOpen) {
+        item.classList.remove('open');
+        questionBtn.setAttribute('aria-expanded', 'false');
+        questionBtn.querySelector('.faq-icon').innerHTML = '&#x25BC;';
+      } else {
+        item.classList.add('open');
+        questionBtn.setAttribute('aria-expanded', 'true');
+        questionBtn.querySelector('.faq-icon').innerHTML = '&#x25B2;';
+      }
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // ...existing code...
+  initFAQAccordion();
+});
