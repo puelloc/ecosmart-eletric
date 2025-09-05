@@ -264,6 +264,81 @@ header {
   font-weight: 600;
 }
 
+
+/* Layout */
+/* Services Section */
+.services {
+    padding: 0px 0;
+    text-align: center;
+}
+
+.services .title {
+    color: #558b2f; /* Darker green for title */
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.services-columns {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between columns */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.service-item {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px; /* Fixed width for each service item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-item .service-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    margin-bottom: 20px; /* Space below image */
+}
+
+.service-item h3 {
+    color: #333; /* Dark gray for subtitles */
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    padding: 0 15px; /* Padding for text */
+}
+
+.service-item p {
+    color: #555; /* Medium gray for descriptions */
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    height: 60px; /* Fixed height for description to align buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px; /* Padding for text */
+}
+
+.service-more-btn {
+    background-color: #558b2f; /* Darker green for button */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Push button to the bottom */
+    margin-bottom: 20px; /* Space below button */
+}
+
+.service-more-btn:hover {
+    background-color: #457a24; /* Slightly darker green on hover */
+}
+
 /* Footer styles */
 footer {
   margin-top: auto;
@@ -319,6 +394,18 @@ footer strong {
     font-size: 0.95rem;
   }
 
+  /* Services Section on Tablets */
+  .services-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .service-item {
+    width: 80%;
+    max-width: 400px;
+  }
+
   footer {
     padding: 20px 0;
   }
@@ -341,9 +428,15 @@ footer strong {
   .hero-description {
     font-size: 0.9rem;
   }
-   footer {
-      padding: 16px 0;
-   }
+
+  /* Services Section Title on Small Mobile */
+  .services .title {
+      font-size: 2rem;
+  }
+
+  footer {
+    padding: 16px 0;
+  }
 
   footer div {
     font-size: 0.8rem;
@@ -422,6 +515,22 @@ footer strong {
   .topbar .logo img {
     height: 50px;
     flex-shrink: 0;
+  }
+
+  /* Services Section on Mobile */
+  .services .title {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+  }
+
+  .service-item {
+      width: 95%;
+  }
+
+  .service-item p {
+      height: auto; /* Allow description height to adjust to content */
+      min-height: 50px; /* Set a minimum height for alignment */
+      padding-bottom: 15px;
   }
 }
 
