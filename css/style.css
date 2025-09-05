@@ -14,6 +14,8 @@
   --radius: 12px;
   --background: var(--light-beige);
   --header-height: 80px;
+  --text-back: #e3f0d0;
+  --text-back-hover: #c9e2a9;
 }
 
 /* Reset + base */
@@ -856,15 +858,17 @@ footer strong {
   align-items: flex-start;
   gap: 20px;
   padding: 25px;
-  background: var(--white);
+  background: var(--text-back);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
+  border: 1px solid var(--tan);
 }
 
 .contact-item:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
+  background: var(--text-back-hover);
 }
 
 .contact-icon {
@@ -874,7 +878,8 @@ footer strong {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--light-green);
+  background: var(--primary-green);
+  color: var(--white);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -918,6 +923,7 @@ footer strong {
   overflow: hidden;
   box-shadow: var(--shadow);
   margin-bottom: 25px;
+  border: 1px solid var(--tan);
 }
 
 .map-container iframe {
@@ -926,11 +932,12 @@ footer strong {
 }
 
 .location-info {
-  background: var(--white);
+  background: var(--text-back);
   padding: 25px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   text-align: center;
+  border: 1px solid var(--tan);
 }
 
 .location-info h3 {
