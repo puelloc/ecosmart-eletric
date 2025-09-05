@@ -428,8 +428,9 @@ header {
         flex: 0 0 250px;
     }
 
-    .project-image {
-        height: 180px;
+    .project-image,
+    .service-item .service-image {
+        height: 200px; /* Consistent height for both image types */
     }
 
     .scroll-btn {
@@ -444,8 +445,17 @@ header {
         flex: 0 0 220px;
     }
 
-    .project-image {
-        height: 160px;
+    .project-image,
+    .service-item .service-image {
+        height: 180px; /* Consistent height for both image types */
+    }
+}
+
+/* Additional mobile-specific image height */
+@media (max-width: 375px) {
+    .project-image,
+    .service-item .service-image {
+        height: 160px; /* Even smaller consistent height for very small screens */
     }
 }
 
