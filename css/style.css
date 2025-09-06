@@ -202,15 +202,21 @@ header {
   font-weight: 600;
 }
 
+/* Navigation Container */
+.nav-container {
+  border-bottom: 1px solid var(--tan);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
 /* Navigation Links */
 .nav-links {
   display: flex;
   gap: 8px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-bottom: 15px 0;
   align-items: center;
-  flex-shrink: 0;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -221,14 +227,15 @@ header {
   border-radius: var(--radius);
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  position: relative;
 }
 
 .nav-links a:hover {
-  background: var(--primary-green);
-  color: var(--white);
-  border-color: var(--primary-green);
-  transform: translateY(-1px);
+  color: var(--primary-green);
+  text-shadow: 0 2px 4px rgba(122, 132, 80, 0.3);
+  text-decoration: underline;
 }
+
 /* Global */
 .title {
   text-align: center;
