@@ -37,25 +37,26 @@
         <span class="accent">ECOSMART</span> ELECTRIC
       </div>
     </div>
-    <nav aria-label="Utility">
-      <!-- Added navigation links -->
-      <ul class="nav-links">
-        <li><a href="#services" aria-label="Go to Services section" data-i18n="nav_services">Services</a></li>
-        <li><a href="#areas-we-serve" aria-label="Go to Areas We Serve section" data-i18n="nav_areas">Areas We Serve</a></li>
-        <li><a href="#home" aria-label="Go to Contact section" data-i18n="nav_contact">Contact</a></li>
-        <li>
-          <div class="lang-switch" title="Language" onclick="toggleLanguageDropdown(this)">
-            <span style="font-weight:700">🌐</span>
-            <span class="lang-display" data-i18n="lang_button_text">Language</span>
-            <div class="lang-dropdown">
-              <div class="lang-option" onclick="selectLanguage('en', 'English')">English</div>
-              <div class="lang-option active" onclick="selectLanguage('es', 'Español')">Español</div>
-            </div>
-          </div>
-        </li>
-      </ul>
-
-    </nav>
+    <div class="lang-switch" title="Language" onclick="toggleLanguageDropdown(this)">
+      <span style="font-weight:700">🌐</span>
+      <span class="lang-display" data-i18n="lang_button_text">Language</span>
+      <div class="lang-dropdown">
+        <div class="lang-option" onclick="selectLanguage('en', 'English')">English</div>
+        <div class="lang-option active" onclick="selectLanguage('es', 'Español')">Español</div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-container">
+    <div class="container">
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#services" aria-label="Go to Services section" data-i18n="nav_services">Services</a></li>
+          <li><a href="#project" aria-label="Go to Projects section" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#faq" aria-label="Go to FAQ section" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="#contact-us" aria-label="Go to Contact section" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
