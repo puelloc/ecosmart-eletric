@@ -89,7 +89,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  padding: 16px 0;
+  padding: 10px 0;
   width: 100%;
   min-width: 0; /* Allow flex items to shrink */
 }
@@ -214,7 +214,7 @@ header {
   gap: 8px;
   list-style: none;
   margin: 0;
-  padding-bottom: 15px 0;
+  padding: 15px 0;
   align-items: center;
   justify-content: center;
 }
