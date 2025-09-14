@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ecosmart Electric – Qualified Electrician</title>
-  <meta name="description" content="Ecosmart Electric – Commercial & Residential electrical services. New installations, repairs, lighting automation, panel & wiring upgrades. Licensed and insured. Call 111-111-1111." />
+  <meta name="description" content="Ecosmart Electric – Commercial & Residential electrical services. New installations, repairs, lighting automation, panel & wiring upgrades. Licensed and insured. Call 786-778-6654." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%237ed957' d='M32 6a18 18 0 0 0-9 33v5a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5A18 18 0 0 0 32 6z'/%3E%3Cpath fill='%23ffffff' d='M20 34h9l-4 8 19-14h-9l4-8z'/%3E%3C/ svg%3E" />
 
   <!-- Schema.org: LocalBusiness (Electrician) -->
@@ -15,8 +15,8 @@
       "@type": "Electrician",
       "name": "Ecosmart Electric",
       "image": "",
-      "telephone": "+1-111-111-1111",
-      "email": "mailto:mail@mail.com",
+      "telephone": "+1-786-778-6654",
+      "email": "mailto:ecosmartelectric@hotmail.com",
       "areaServed": "Miami, FL",
       "url": "https://your-github-username.github.io/ecosmart-electric",
       "description": "Commercial and residential electrical services: new installations, repairs, wiring & panel upgrades, lighting automation, outdoor & pole lighting, troubleshooting. Licensed and insured."
@@ -37,25 +37,27 @@
         <span class="accent">ECOSMART</span> ELECTRIC
       </div>
     </div>
-    <nav aria-label="Utility">
-      <!-- Added navigation links -->
-      <ul class="nav-links">
-        <li><a href="#services" aria-label="Go to Services section" data-i18n="nav_services">Services</a></li>
-        <li><a href="#areas-we-serve" aria-label="Go to Areas We Serve section" data-i18n="nav_areas">Areas We Serve</a></li>
-        <li><a href="#home" aria-label="Go to Contact section" data-i18n="nav_contact">Contact</a></li>
-        <li>
-          <div class="lang-switch" title="Language" onclick="toggleLanguageDropdown(this)">
-            <span style="font-weight:700">🌐</span>
-            <span class="lang-display" data-i18n="lang_button_text">Language</span>
-            <div class="lang-dropdown">
-              <div class="lang-option active" onclick="selectLanguage('en', 'English')">English</div>
-              <div class="lang-option" onclick="selectLanguage('es', 'Español')">Español</div>
-            </div>
-          </div>
-        </li>
-      </ul>
-
-    </nav>
+    <div class="lang-switch" title="Language" onclick="toggleLanguageDropdown(this)">
+      <span style="font-weight:700">🌐</span>
+      <span class="lang-display" data-i18n="lang_button_text">Language</span>
+      <div class="lang-dropdown">
+        <div class="lang-option" onclick="selectLanguage('en', 'English')">English</div>
+        <div class="lang-option active" onclick="selectLanguage('es', 'Español')">Español</div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-container">
+    <div class="container">
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" aria-label="Go to Home section" data-i18n="nav_home">Home</a></li>
+          <li><a href="#services" aria-label="Go to Services section" data-i18n="nav_services">Services</a></li>
+          <li><a href="#project" aria-label="Go to Projects section" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#faq" aria-label="Go to FAQ section" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="#contact-us" aria-label="Go to Contact section" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -63,64 +65,195 @@
 <main>
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="container hero-grid">
+    <div class="container">
       <h1 data-i18n="hero_title" class="title">Welcome to Ecosmart Electric</h1>
-
       <p class="hero-description" data-i18n="hero_description">
         At Ecosmart Electric, we offer sustainable, high-quality electrical solutions for our customers. Our mission is to provide exceptional service at an environmentally friendly price, ensuring total customer satisfaction, certified plans, and legal insurance.
       </p>
-
-      <h3 data-i18n="hero_about_us">lang.hero_about_us</h3>
-
+      <h3 data-i18n="hero_about_us" class="hero-about-us">lang.hero_about_us</h3>
       <p class="hero-description" data-i18n="hero-card-description">
         At Ecosmart Electric, we specialize in providing sustainable, high-quality electrical solutions to meet all your needs. Whether you're starting <strong>new projects</strong>, need immediate <strong>repairs</strong>, or are looking to <strong>modernize</strong> your electrical system, our team of experts is here to help. Our mission is to deliver exceptional service at an eco-friendly price, ensuring maximum customer satisfaction with every project we undertake.
       </p>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" aria-labelledby="services-title">
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-title">
+        <div class="container services">
+            <h1 data-i18n="services_title" class="title">lang.services_title</h1>
+            <div class="services-columns">
+                <div class="service-item">
+                    <img src="images/services/electrical_installations.webp" alt="Electrical Installations" class="service-image">
+                    <h3 data-i18n="electrical_installations_title">lang.electrical_installations_title</h3>
+                    <p data-i18n="electrical_installations_subtitle">lang.electrical_installations_subtitle</p>
+                    <button class="service-more-btn" data-i18n="service_more_info">More information</button>
+                </div>
+                <div class="service-item">
+                    <img src="images/services/electrical_maintenance.webp" alt="Electrical Maintenance" class="service-image">
+                    <h3 data-i18n="electrical_maintenance_title">lang.electrical_maintenance_title</h3>
+                    <p data-i18n="electrical_maintenance_subtitle">lang.electrical_maintenance_subtitle</p>
+                    <button class="service-more-btn" data-i18n="service_more_info">More information</button>
+                </div>
+                <div class="service-item">
+                    <img src="images/services/led_lighting.webp" alt="LED Lighting" class="service-image">
+                    <h3 data-i18n="led_lighting_title">lang.led_lighting_title</h3>
+                    <p data-i18n="led_lighting_subtitle">lang.led_lighting_subtitle</p>
+                    <button class="service-more-btn" data-i18n="service_more_info">More information</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-title">
+        <div class="container faq-section">
+            <h1 id="faq-title" class="title" data-i18n="faq_title">lang.faq_title</h1>
+            <div class="faq-list">
+                <div class="faq-item open">
+                    <button class="faq-question" aria-expanded="true">
+                        <span data-i18n="faq_q1">lang.faq_q1</span>
+                        <span class="faq-icon">&#x25B2;</span>
+                    </button>
+                    <div class="faq-answer" data-i18n="faq_a1">lang.faq_a1</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq_q2">lang.faq_q2</span>
+                        <span class="faq-icon">&#x25BC;</span>
+                    </button>
+                    <div class="faq-answer" data-i18n="faq_a2">lang.faq_a2</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq_q3">lang.faq_q3</span>
+                        <span class="faq-icon">&#x25BC;</span>
+                    </button>
+                    <div class="faq-answer" data-i18n="faq_a3">lang.faq_a3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROJECTS -->
+    <section id="project" aria-labelledby="projects-title">
+        <div class="container projects">
+            <h1 data-i18n="projects_title" class="title">lang.projects_title</h1>
+            <div class="project-gallery-container">
+                <button class="scroll-btn scroll-left" aria-label="Scroll left">
+                    <span aria-hidden="true">&#10094;</span>
+                </button>
+                <div class="project-gallery">
+                    <div class="project-item">
+                        <img src="images/projects/1.webp" alt="Project 1" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/2.webp" alt="Project 2" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/3.webp" alt="Project 3" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/4.webp" alt="Project 4" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/5.webp" alt="Project 5" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/6.webp" alt="Project 6" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/7.webp" alt="Project 7" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/8.webp" alt="Project 8" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/9.webp" alt="Project 9" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/10.webp" alt="Project 10" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/11.webp" alt="Project 11" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/12.webp" alt="Project 12" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/13.webp" alt="Project 13" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/14.webp" alt="Project 14" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/15.webp" alt="Project 15" class="project-image">
+                    </div>
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="Scroll right">
+                    <span aria-hidden="true">&#10095;</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+  <!-- Contact Us -->
+  <section id="contact-us" aria-labelledby="contact-us-title">
     <div class="container">
-      <h2 id="services-title" class="title" data-i18n="services_title">Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-image">
-            <img src="https://via.placeholder.com/300x200/7a8450/ffffff?text=Electrical+Installation" alt="Electrical Installation Services" />
+      <h1 id="contact-us-title" class="title" data-i18n="contact_title">lang.contact_title</h1>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2 data-i18n="contact_info_title" class="contact-info-title">lang.contact_info_title</h2>
+          <div class="contact-methods">
+            <a href="tel:+1-786-778-6654" class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-details">
+                <h3 data-i18n="contact_phone_title">Call Us</h3>
+                <span class="contact-link">786-778-6654</span>
+              </div>
+            </a>
+            <a href="sms:+1-786-778-6654" class="contact-item">
+              <div class="contact-icon">💬</div>
+              <div class="contact-details">
+                <h3 data-i18n="contact_text_title">Text Us</h3>
+                <span class="contact-link">786-778-6654</span>
+              </div>
+            </a>
+            <a href="mailto:ecosmartelectric@hotmail.com" class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-details">
+                <h3 data-i18n="contact_email_title">Email Us</h3>
+                <span class="contact-link">ecosmartelectric@hotmail.com</span>
+              </div>
+            </a>
           </div>
-          <h3 class="service-title" data-i18n="service_installation_title">Electrical Installation</h3>
-          <p class="service-description" data-i18n="service_installation_desc">
-            Professional electrical installations for residential and commercial properties. From new wiring to complete electrical system setup, we ensure safe and efficient power distribution throughout your property.
-          </p>
         </div>
-
-        <div class="service-card">
-          <div class="service-image">
-            <img src="https://via.placeholder.com/300x200/9db65a/ffffff?text=Electrical+Repair" alt="Electrical Repair Services" />
+        <div class="areas-we-serve" id="areas-we-serve">
+          <h2 data-i18n="areas_title">lang.areas_title</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d917598.5646811195!2d-80.82882483190922!3d26.054181550000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9745374484071%3A0xeb174b8d9d82af56!2sMiami%20Metropolitan%20Area%2C%20FL!5e0!3m2!1sen!2sus!4v1757102951002!5m2!1sen!2sus"
+              width="100%"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Service Area Map - Miami, Florida">
+            </iframe>
           </div>
-          <h3 class="service-title" data-i18n="service_repair_title">Electrical Repair</h3>
-          <p class="service-description" data-i18n="service_repair_desc">
-            Fast and reliable electrical repair services for all types of electrical issues. Our certified electricians diagnose and fix problems quickly to restore power and safety to your home or business.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-image">
-            <img src="https://via.placeholder.com/300x200/8fbc3f/ffffff?text=LED+Lighting" alt="LED Lighting Services" />
+          <div class="location-info">
+            <h3 data-i18n="location_title">Ubicación</h3>
+            <div class="location-details">
+              <p><strong>Ecosmart Electric</strong></p>
+              <p data-i18n="location_address">Miami, Florida, Estados Unidos</p>
+            </div>
           </div>
-          <h3 class="service-title" data-i18n="service_lighting_title">LED Lighting Solutions</h3>
-          <p class="service-description" data-i18n="service_lighting_desc">
-            Energy-efficient LED lighting installations and upgrades. Reduce your energy costs while improving illumination quality with our modern LED lighting solutions for indoor and outdoor applications.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- AREAS WE SERVE -->
-  <section id="areas-we-serve" aria-labelledby="areas-title">
-    <div class="container">
-    </div>
-  </section>
 </main>
 
 <footer role="contentinfo">
