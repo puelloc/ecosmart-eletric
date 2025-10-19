@@ -16,6 +16,8 @@
   --header-height: 80px;
   --text-back: #e3f0d0;
   --text-back-hover: #c9e2a9;
+  --promo-red: #c41e3a; /* Christmas red */
+  --promo-gold: #ffd700; /* Gold accent */
 }
 
 /* Reset + base */
@@ -771,322 +773,364 @@ footer strong {
   }
 }
 
-/* FAQ Section Styles */
-.faq-section {
-  border-radius: 8px;
-  margin: 40px auto 0 auto;
-  padding: 32px 0 32px 0;
+/* Promotional Banner Styles */
+.promo-banner {
+  background: linear-gradient(135deg, var(--promo-red) 0%, #a01729 100%);
+  color: var(--white);
+  padding: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-bottom: 3px solid var(--promo-gold);
+  position: relative;
+  overflow: hidden;
+  animation: slideDown 0.5s ease-out;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.faq-item {
-  background: var(--primary-green);
-  border-radius: 4px;
-  margin-bottom: 4px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  border: 1px solid #7a8450;
-}
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 500;
-  text-align: left;
-  padding: 18px 24px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  outline: none;
-  transition: background 0.2s;
-}
-.faq-question:hover {
-  background: var(--dark-green);
-}
-.faq-icon {
-  font-size: 1.3em;
-  margin-left: 12px;
-  transition: transform 0.2s;
-}
-.faq-answer {
-  background: #e3f0d0;
-  color: var(--primary-green);
-  font-size: 1.1em;
-  padding: 18px 24px;
-  border-top: 1px solid #7a8450;
-  animation: fadeIn 0.3s;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.faq-item:not(.open) .faq-answer {
+.promo-banner.minimized {
   display: none;
 }
-.faq-item.open .faq-icon {
-  transform: rotate(180deg);
-}
 
-/* Responsive FAQ */
-@media (max-width: 600px) {
-  .faq-section {
-    padding: 18px 0;
-    max-width: 100%;
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
   }
-  .faq-title {
-    font-size: 1.3em;
-    margin-bottom: 16px;
-  }
-  .faq-question, .faq-answer {
-    padding: 12px 12px;
-    font-size: 1em;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Contact Section Styles */
-#contact-us {
-  padding: 60px 0;
-  background: var(--beige);
-  margin-top: 40px;
+.promo-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
 }
 
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-top: 40px;
-  height: 100%;
+.promo-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite reverse;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
 }
 
-.contact-info h2 {
-  color: var(--dark-green);
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-
-.contact-methods {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  flex: 1;
-  justify-content: space-between;
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 25px;
-  background: var(--text-back);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  border: 1px solid var(--tan);
-}
-
-.contact-item:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
-  background: var(--text-back-hover);
-}
-
-.contact-icon {
-  font-size: 2rem;
-  width: 60px;
-  height: 60px;
+.promo-banner .container {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--primary-green);
-  color: var(--white);
-  border-radius: 50%;
-  flex-shrink: 0;
+  gap: 20px;
 }
 
-.contact-details h3 {
-  color: var(--dark-green);
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.contact-link {
-  color: var(--primary-green);
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-  color: var(--dark-green);
-  text-decoration: underline;
-}
-
-.contact-details p {
-  color: var(--ink);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Areas We Serve Styles */
-.areas-we-serve h2 {
-  color: var(--dark-green);
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  font-weight: 600;
+.promo-content {
+  flex: 1;
   text-align: center;
 }
 
-.map-container {
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  margin-bottom: 25px;
-  border: 1px solid var(--tan);
-}
-
-.map-container iframe {
-  display: block;
-  width: 100%;
-}
-
-.location-info {
-  background: var(--text-back);
-  padding: 25px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  text-align: center;
-  border: 1px solid var(--tan);
-}
-
-.location-info h3 {
-  color: var(--dark-green);
-  font-size: 1.3rem;
+.promo-badge {
+  display: inline-block;
+  background: var(--promo-gold);
+  color: var(--promo-red);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
   margin-bottom: 15px;
-  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s ease-in-out infinite;
 }
 
-.location-details p {
-  color: var(--ink);
-  margin: 8px 0;
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.promo-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.promo-description {
+  font-size: 1.15rem;
   line-height: 1.6;
+  margin: 0 0 12px 0;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.location-details p:first-child {
-  font-size: 1.1rem;
-  color: var(--primary-green);
+.promo-features {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--promo-gold);
+  margin: 0 0 20px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Section Responsive Design */
-@media (max-width: 968px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .contact-methods {
-    gap: 20px;
-  }
-
-  .contact-item {
-    padding: 20px;
-  }
+.promo-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
+.promo-cta {
+  display: inline-block;
+  background: var(--promo-gold);
+  color: var(--promo-red);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 3px solid var(--white);
+  cursor: pointer;
+}
+
+.promo-cta:hover {
+  background: var(--white);
+  color: var(--promo-red);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Minimized Promotional Banner */
+.promo-banner-minimized {
+  display: none;
+  background: linear-gradient(135deg, var(--promo-red) 0%, #a01729 100%);
+  color: var(--white);
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid var(--promo-gold);
+  position: relative;
+  animation: slideDown 0.3s ease-out;
+  cursor: pointer;
+}
+
+.promo-banner-minimized.visible {
+  display: block;
+}
+
+.promo-banner-minimized .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.promo-mini-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+}
+
+.promo-mini-badge {
+  font-size: 1.3rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.promo-mini-text {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.promo-mini-text strong {
+  font-weight: 700;
+}
+
+.promo-mini-cta {
+  display: inline-block;
+  background: var(--promo-gold);
+  color: var(--promo-red);
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  border: 2px solid var(--white);
+  cursor: pointer;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.promo-mini-cta:hover {
+  background: var(--white);
+  color: var(--promo-red);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  animation: none;
+}
+
+/* Promotional Banner Responsive Design */
 @media (max-width: 768px) {
-  #contact-us {
-    padding: 40px 0;
-  }
-    .contact-info-title{
-      text-align: center;
-    }
-
-  .contact-container {
-    gap: 30px;
-    margin-top: 30px;
+  .promo-banner {
+    padding: 20px 0;
   }
 
-  .contact-info h2,
-  .areas-we-serve h2 {
+  .promo-banner .container {
+    padding: 0 50px 0 20px;
+  }
+
+  .promo-title {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
-  .contact-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-    align-items: center;
+  .promo-description {
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
 
-  .contact-icon {
-    align-self: center;
+  .promo-features {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
   }
 
-  .contact-details {
-    text-align: center;
+  .promo-cta {
+    padding: 14px 30px;
+    font-size: 1.05rem;
   }
 
-  .contact-details h3 {
-    text-align: center;
+  .promo-badge {
+    font-size: 0.9rem;
+    padding: 6px 16px;
+    margin-bottom: 12px;
   }
 
-  .map-container iframe {
-    height: 250px;
+  .promo-minimize {
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+    top: 10px;
+    right: 10px;
+  }
+
+  .promo-banner-minimized .container {
+    padding: 0 50px 0 20px;
+  }
+
+  .promo-mini-content {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+
+  .promo-mini-cta {
+    padding: 6px 16px;
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
-  .contact-item {
-    padding: 15px;
-    text-align: center;
-    align-items: center;
+  .promo-banner {
+    padding: 16px 0;
   }
 
-    .contact-info-title{
-      text-align: center;
-    }
-
-  .contact-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+  .promo-banner .container {
+    padding: 0 45px 0 15px;
   }
 
-  .contact-details {
-    text-align: center;
-    width: 100%;
+  .promo-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
   }
 
-  .contact-details h3 {
-    font-size: 1.1rem;
-    text-align: center;
+  .promo-description {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
   }
 
-  .contact-link {
-    text-align: center;
-    display: block;
+  .promo-features {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
   }
 
-  .location-info {
-    padding: 20px;
+  .promo-cta {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-width: 2px;
   }
 
-  .map-container iframe {
-    height: 200px;
+  .promo-badge {
+    font-size: 0.85rem;
+    padding: 5px 14px;
+    margin-bottom: 10px;
+  }
+
+  .promo-expires {
+    font-size: 0.85rem;
+  }
+
+  .promo-minimize {
+    width: 28px;
+    height: 28px;
+    font-size: 1.3rem;
+  }
+
+  .promo-banner-minimized {
+    padding: 10px 0;
+  }
+
+  .promo-banner-minimized .container {
+    padding: 0 40px 0 10px;
+  }
+
+  .promo-mini-content {
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+
+  .promo-mini-text {
+    font-size: 0.85rem;
+  }
+
+  .promo-mini-cta {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  .promo-expand {
+    width: 28px;
+    height: 28px;
+    font-size: 1.3rem;
   }
 }
+
+/* Reset + base */
