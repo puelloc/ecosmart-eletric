@@ -1354,7 +1354,7 @@ footer strong {
   }
 
   .promo-banner .container {
-    padding: 0 50px 0 20px;
+    padding: 0 20px;
   }
 
   .promo-title {
@@ -1392,17 +1392,29 @@ footer strong {
   }
 
   .promo-banner-minimized .container {
-    padding: 0 50px 0 20px;
+    padding: 0 20px;
   }
 
   .promo-mini-content {
-    gap: 12px;
-    font-size: 0.9rem;
+    gap: 8px;
+    font-size: 0.85rem;
+    flex-wrap: nowrap;
+  }
+
+  .promo-mini-badge {
+    flex-shrink: 0;
+  }
+
+  .promo-mini-text {
+    flex-shrink: 1;
+    min-width: 0;
   }
 
   .promo-mini-cta {
-    padding: 6px 16px;
-    font-size: 0.85rem;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 }
 
@@ -1412,11 +1424,11 @@ footer strong {
   }
 
   .promo-banner .container {
-    padding: 0 45px 0 15px;
+    padding: 0 15px;
   }
 
   .promo-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
   }
 
@@ -1453,25 +1465,36 @@ footer strong {
   }
 
   .promo-banner-minimized {
-    padding: 10px 0;
+    padding: 8px 0;
   }
 
   .promo-banner-minimized .container {
-    padding: 0 40px 0 10px;
+    padding: 0 10px;
   }
 
   .promo-mini-content {
-    gap: 8px;
-    font-size: 0.85rem;
+    gap: 6px;
+    font-size: 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .promo-mini-badge {
+    font-size: 1.1rem;
   }
 
   .promo-mini-text {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .promo-mini-text strong {
+    display: inline;
   }
 
   .promo-mini-cta {
-    padding: 6px 14px;
-    font-size: 0.8rem;
+    padding: 6px 12px;
+    font-size: 0.7rem;
+    white-space: nowrap;
   }
 
   .promo-expand {
