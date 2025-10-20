@@ -230,3 +230,88 @@ document.addEventListener('DOMContentLoaded', function() {
   // ...existing code...
   initFAQAccordion();
 });
+
+// Service Modal Logic
+const serviceData = {
+  electrical_installations: {
+    image: 'images/projects/1.webp',
+    titleKey: 'electrical_installations_title',
+    descriptionKey: 'modal_installations_description',
+    featuresKey: 'modal_installations_features'
+  },
+  electrical_maintenance: {
+    image: 'images/october/box_1.jpg',
+    titleKey: 'electrical_maintenance_title',
+    descriptionKey: 'modal_maintenance_description',
+    featuresKey: 'modal_maintenance_features'
+  },
+  led_lighting: {
+    image: 'images/october/light_1.jpg',
+    titleKey: 'led_lighting_title',
+    descriptionKey: 'modal_lighting_description',
+    featuresKey: 'modal_lighting_features'
+  }
+};
+
+function openServiceModal(serviceType) {
+  const modal = document.getElementById('service-modal');
+  const data = serviceData[serviceType];
+
+  if (!data) return;
+
+  // Get current language
+  const currentLang = document.documentElement.lang || 'es';
+  const dict = translations[currentLang] || translations['es'] || {};
+
+  // Set modal content
+  document.getElementById('modal-service-image').src = data.image;
+  document.getElementById('modal-service-image').alt = dict[data.titleKey] || '';
+  document.getElementById('modal-service-title').textContent = dict[data.titleKey] || '';
+  document.getElementById('modal-service-description').textContent = dict[data.descriptionKey] || '';
+
+  // Set features list
+  const featuresList = document.getElementById('modal-service-features');
+  featuresList.innerHTML = '';
+  const features = dict[data.featuresKey] || [];
+  if (Array.isArray(features)) {
+    features.forEach(feature => {
+      const li = document.createElement('li');
+      li.textContent = feature;
+      featuresList.appendChild(li);
+    });
+  }
+
+  // Show modal
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeServiceModal() {
+  const modal = document.getElementById('service-modal');
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('service-modal');
+  if (event.target === modal) {
+    closeServiceModal();
+  }
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeServiceModal();
+  }
+});
+
+// Attach modal triggers to service buttons
+document.addEventListener('DOMContentLoaded', function() {
+  const serviceButtons = document.querySelectorAll('.service-more-btn');
+  serviceButtons.forEach((btn, index) => {
+    const serviceTypes = ['electrical_installations', 'electrical_maintenance', 'led_lighting'];
+    btn.addEventListener('click', () => openServiceModal(serviceTypes[index]));
+  });
+});

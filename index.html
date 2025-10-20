@@ -304,6 +304,36 @@
 
 </main>
 
+<!-- Service Modals -->
+<div id="service-modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeServiceModal()">&times;</span>
+    <div class="modal-body">
+      <img id="modal-service-image" src="" alt="" class="modal-image">
+      <h2 id="modal-service-title" class="modal-title"></h2>
+      <p id="modal-service-description" class="modal-description"></p>
+      <div class="modal-features">
+        <h3 data-i18n="modal_features_title">What We Offer:</h3>
+        <ul id="modal-service-features"></ul>
+      </div>
+      <div class="modal-contact">
+        <h3 data-i18n="modal_contact_title">Get Started Today</h3>
+        <p data-i18n="modal_contact_text">Contact us for a free consultation and quote</p>
+        <div class="modal-contact-buttons">
+          <a href="tel:+1-786-778-6654" class="modal-btn modal-btn-primary">
+            <span class="modal-btn-icon">📞</span>
+            <span data-i18n="modal_call_btn">Call Now</span>
+          </a>
+          <a href="sms:+1-786-778-6654" class="modal-btn modal-btn-secondary">
+            <span class="modal-btn-icon">💬</span>
+            <span data-i18n="modal_text_btn">Text Us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer role="contentinfo">
     <div class="container">
         <div class="footer-content">
@@ -366,3 +396,4 @@
 </script>
 </body>
 </html>
+

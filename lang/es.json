@@ -41,5 +41,43 @@
   "promo_features": "¡Ofertas y descuentos especiales en tomas, conexiones e instalaciones navideñas!",
   "promo_cta": "¡Llame Ahora para su Cotización Gratis!",
   "promo_expires": "Oferta por Tiempo Limitado - ¡Reserve Ahora!",
-  "promo_click_details": "Ver Más"
+  "promo_click_details": "Ver Más",
+  "modal_features_title": "Lo Que Ofrecemos:",
+  "modal_contact_title": "Comience Hoy",
+  "modal_contact_text": "Contáctenos para una consulta y cotización gratuita",
+  "modal_call_btn": "Llamar Ahora",
+  "modal_text_btn": "Enviar Mensaje",
+  "modal_installations_description": "Nuestros servicios de instalación eléctrica proporcionan soluciones completas para propiedades residenciales y comerciales. Desde construcción nueva hasta renovaciones, garantizamos instalaciones seguras y conformes a los códigos utilizando materiales de la más alta calidad y mano de obra experta.",
+  "modal_installations_features": [
+    "Cableado de construcción nueva e instalación de paneles",
+    "Recableado completo y actualizaciones de viviendas",
+    "Instalación de tomacorrientes e interruptores",
+    "Instalación de protección GFCI y AFCI",
+    "Adquisición de permisos e inspecciones eléctricas",
+    "Instalación de sistemas eléctricos comerciales",
+    "Verificación de cumplimiento de códigos",
+    "Profesionales licenciados y asegurados"
+  ],
+  "modal_maintenance_description": "El mantenimiento eléctrico regular es esencial para la seguridad y eficiencia. Nuestros servicios de mantenimiento integrales identifican problemas potenciales antes de que se conviertan en problemas, asegurando que sus sistemas eléctricos operen de manera confiable y segura durante años.",
+  "modal_maintenance_features": [
+    "Inspecciones y diagnósticos de sistemas eléctricos",
+    "Prueba y reemplazo de interruptores automáticos",
+    "Inspección y reparación de cableado",
+    "Mantenimiento y actualizaciones de paneles eléctricos",
+    "Prueba de dispositivos de seguridad (GFCI, AFCI, protección contra sobretensiones)",
+    "Reparaciones eléctricas de emergencia",
+    "Detección y solución de fallas",
+    "Servicio de emergencia disponible 24/7"
+  ],
+  "modal_lighting_description": "Transforme su espacio con soluciones de iluminación LED eficientes en energía. Nuestras instalaciones de iluminación expertas mejoran la estética mientras reducen los costos de energía hasta en un 75%. Nos especializamos en diseño de iluminación moderna para aplicaciones residenciales y comerciales.",
+  "modal_lighting_features": [
+    "Instalación de luces empotradas (latas de luz)",
+    "Modernización y actualizaciones LED",
+    "Diseño de iluminación interior y exterior",
+    "Instalación de interruptores reguladores",
+    "Sistemas de iluminación inteligente y automatización",
+    "Iluminación de paisaje y seguridad",
+    "Consulta de iluminación eficiente en energía",
+    "Diseño de iluminación personalizado para cualquier espacio"
+  ]
 }

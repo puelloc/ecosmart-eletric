@@ -40,5 +40,43 @@
   "promo_description": "Professional recessed light installation with materials included using Ourgret lighting. From $83.58 per light (minimum 3 lights). Offers and discounts available on outlets, connections, and holiday lighting installations.",  "promo_features": "Special discounts on outlets, connections, and Christmas lighting installations!",
   "promo_cta": "Call Now for Your Free Quote!",
   "promo_expires": "Limited Time Offer - Book Now!",
-  "promo_click_details": "Learn More"
+  "promo_click_details": "Learn More",
+  "modal_features_title": "What We Offer:",
+  "modal_contact_title": "Get Started Today",
+  "modal_contact_text": "Contact us for a free consultation and quote",
+  "modal_call_btn": "Call Now",
+  "modal_text_btn": "Text Us",
+  "modal_installations_description": "Our electrical installation services provide complete solutions for residential and commercial properties. From new construction to renovations, we ensure safe, code-compliant installations using the highest quality materials and expert craftsmanship.",
+  "modal_installations_features": [
+    "New construction wiring and panel installation",
+    "Complete home rewiring and upgrades",
+    "Outlet and switch installation",
+    "GFCI and AFCI protection installation",
+    "Permit acquisition and electrical inspections",
+    "Commercial electrical system installation",
+    "Code compliance verification",
+    "Licensed and insured professionals"
+  ],
+  "modal_maintenance_description": "Regular electrical maintenance is essential for safety and efficiency. Our comprehensive maintenance services identify potential issues before they become problems, ensuring your electrical systems operate reliably and safely for years to come.",
+  "modal_maintenance_features": [
+    "Electrical system inspections and diagnostics",
+    "Circuit breaker testing and replacement",
+    "Wiring inspection and repair",
+    "Electrical panel maintenance and upgrades",
+    "Safety device testing (GFCI, AFCI, surge protection)",
+    "Emergency electrical repairs",
+    "Troubleshooting and fault detection",
+    "24/7 emergency service available"
+  ],
+  "modal_lighting_description": "Transform your space with energy-efficient LED lighting solutions. Our expert lighting installations enhance aesthetics while reducing energy costs by up to 75%. We specialize in modern lighting design for both residential and commercial applications.",
+  "modal_lighting_features": [
+    "Recessed lighting installation (can lights)",
+    "LED retrofit and upgrades",
+    "Indoor and outdoor lighting design",
+    "Dimmer switch installation",
+    "Smart lighting and automation systems",
+    "Landscape and security lighting",
+    "Energy-efficient lighting consultation",
+    "Custom lighting design for any space"
+  ]
 }
