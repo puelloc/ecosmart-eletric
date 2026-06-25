@@ -78,8 +78,21 @@
 
     <section id="services" aria-labelledby="services-title">
         <div class="container services">
-            <h1 data-i18n="services_title" class="title">lang.services_title</h1>
-            <div class="services-columns">
+            <div class="services-layout">
+                <div class="services-infographic">
+                    <button class="infographic-btn" onclick="openInfoGraphicModal()" aria-label="View full infographic">
+                        <img
+                            id="info-graphic-img"
+                            src="images/june2026/ecosmart_info_english.png"
+                            data-src-en="images/june2026/ecosmart_info_english.png"
+                            data-src-es="images/june2026/ecosmart_info_espanol.png"
+                            alt="Ecosmart Electric – Services Overview"
+                            class="info-graphic-img"
+                        >
+                        <span class="infographic-hint" aria-hidden="true">🔍</span>
+                    </button>
+                </div>
+                <h1 data-i18n="services_title" class="title services-title">lang.services_title</h1>
                 <div class="service-item">
                     <img src="images/services/electrical_installations.webp" alt="Electrical Installations" class="service-image">
                     <h3 data-i18n="electrical_installations_title">lang.electrical_installations_title</h3>
@@ -271,6 +284,14 @@
   </section>
 
 </main>
+
+<!-- Infographic Lightbox -->
+<div id="infographic-modal" class="modal" role="dialog" aria-modal="true" aria-label="Services infographic enlarged">
+  <div class="infographic-modal-content">
+    <button class="modal-close infographic-modal-close" onclick="closeInfoGraphicModal()" aria-label="Close">&times;</button>
+    <img id="infographic-modal-img" src="" alt="Ecosmart Electric – Services Overview" class="infographic-modal-img">
+  </div>
+</div>
 
 <!-- Service Modals -->
 <div id="service-modal" class="modal">

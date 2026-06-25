@@ -279,6 +279,7 @@ section:last-of-type::after {
   text-decoration-color: var(--primary-green);
   text-underline-offset: 8px;
   text-decoration-thickness: 3px;
+  text-align: center;
 }
 
 .hero h3 {
@@ -298,6 +299,134 @@ section:last-of-type::after {
   font-weight: 600;
 }
 
+/* Services layout: infographic + 3 cards in one flex row */
+.services-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Title spans full width above the row on desktop */
+.services-title {
+  order: -1;
+  flex: 0 0 100%;
+  margin-bottom: 0;
+}
+
+.services-infographic {
+  flex: 0 0 22%;
+  position: relative;
+  min-height: 100%;
+}
+
+/* Clickable infographic button */
+.infographic-btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: zoom-in;
+  position: relative;
+  overflow: hidden;
+}
+
+.infographic-btn:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 3px;
+}
+
+/* Magnifier hint icon */
+.infographic-hint {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.infographic-btn:hover .infographic-hint {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* Subtle overlay on hover */
+.infographic-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(90, 107, 47, 0.08);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.infographic-btn:hover::after {
+  opacity: 1;
+}
+
+.info-graphic-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.25s ease;
+}
+
+.infographic-btn:hover .info-graphic-img {
+  transform: scale(1.02);
+}
+
+/* Infographic lightbox */
+.infographic-modal-content {
+  position: relative;
+  margin: auto;
+  max-width: 90vw;
+  max-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infographic-modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+  display: block;
+}
+
+.infographic-modal-close {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 1100;
+}
+
+.services-content {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* Layout */
 /* Services Section */
@@ -306,17 +435,11 @@ section:last-of-type::after {
     text-align: center;
 }
 
-.services-columns {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Space between columns */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-}
-
 .service-item {
     border-radius: 8px;
     overflow: hidden;
-    width: 300px; /* Fixed width for each service item */
+    flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,10 +448,10 @@ section:last-of-type::after {
 
 .service-item .service-image {
     width: 100%;
-    height: 400px; /* Fixed height for images */
-    object-fit: cover; /* Cover the area, cropping if necessary */
-    border-radius: 8px 8px 8px 8px; /* Rounded top corners */
-    margin-bottom: 15px; /* Reduced space below image */
+    aspect-ratio: 4 / 3; /* scales with card width instead of fixed px */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .service-item h3 {
@@ -339,15 +462,17 @@ section:last-of-type::after {
 }
 
 .service-item p {
-    color: var(--ink); /* Use site ink color for descriptions */
+    color: var(--ink);
     font-size: 1em;
     line-height: 1.5;
     margin-bottom: 20px;
-    height: 60px; /* Fixed height for description to align buttons */
+    min-height: 60px;   /* aligns buttons without clipping longer text */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 15px; /* Padding for text */
+    padding: 0 15px;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .service-more-btn {
@@ -578,15 +703,12 @@ footer strong {
   }
 
   .services-columns {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Reduced gap between service items */
+    gap: 12px;
   }
 
   .service-item {
-    width: 80%;
-    max-width: 400px;
-    margin-bottom: 0; /* Remove extra bottom margin */
+    min-width: 0;
+    margin-bottom: 0;
   }
 
   .title {
@@ -725,23 +847,25 @@ footer strong {
   /* Services Section on Mobile */
   .services .title {
       font-size: 2.2rem;
-      margin-bottom: 20px; /* Reduced from 40px */
-  }
-
-  .service-item {
-      width: 95%;
-      margin-bottom: 15px; /* Added small margin between items */
-  }
-
-  .service-item p {
-      height: auto; /* Allow description height to adjust to content */
-      min-height: 40px; /* Reduced from 50px */
-      padding-bottom: 10px; /* Reduced from 15px */
-      margin-bottom: 5px; /* Added smaller margin */
+      margin-bottom: 20px;
   }
 
   .services-columns {
-    gap: 15px; /* Further reduced gap on mobile */
+    flex-wrap: wrap; /* allow wrapping once stacked to single column */
+    gap: 15px;
+  }
+
+  .service-item {
+      flex: 0 0 100%;
+      width: 95%;
+      margin-bottom: 15px;
+  }
+
+  .service-item p {
+      height: auto;
+      min-height: 40px;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
   }
 }
 
@@ -1023,6 +1147,32 @@ footer strong {
   .contact-container {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .services-layout {
+    flex-direction: column;
+  }
+
+  /* On mobile: infographic floats to the top, above the title */
+  .services-infographic {
+    order: -2;
+    position: static;
+    min-height: unset;
+  }
+
+  .services-title {
+    order: -1;
+  }
+
+  .info-graphic-img {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    max-width: 480px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 24px;
   }
 
   .contact-methods {

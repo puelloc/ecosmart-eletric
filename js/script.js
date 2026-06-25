@@ -34,6 +34,12 @@ function applyLang(lang) {
     }
   });
 
+  // Swap language-specific images (data-src-en / data-src-es)
+  document.querySelectorAll("img[data-src-en][data-src-es]").forEach(img => {
+    const src = img.getAttribute(`data-src-${lang}`);
+    if (src) img.src = src;
+  });
+
   document.documentElement.lang = (lang === "es" ? "es" : "en");
 
   // Update CTA aria-label to keep it accessible in each language
@@ -234,12 +240,17 @@ window.addEventListener('click', function(event) {
   if (event.target === modal) {
     closeServiceModal();
   }
+  const infoModal = document.getElementById('infographic-modal');
+  if (event.target === infoModal) {
+    closeInfoGraphicModal();
+  }
 });
 
 // Close modal on Escape key
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
     closeServiceModal();
+    closeInfoGraphicModal();
   }
 });
 
@@ -251,3 +262,17 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('click', () => openServiceModal(serviceTypes[index]));
   });
 });
+
+// Infographic lightbox
+function openInfoGraphicModal() {
+  const src = document.getElementById('info-graphic-img').src;
+  const modalImg = document.getElementById('infographic-modal-img');
+  modalImg.src = src;
+  document.getElementById('infographic-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeInfoGraphicModal() {
+  document.getElementById('infographic-modal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
