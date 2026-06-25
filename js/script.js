@@ -268,7 +268,7 @@ function openInfoGraphicModal() {
   const src = document.getElementById('info-graphic-img').src;
   const modalImg = document.getElementById('infographic-modal-img');
   modalImg.src = src;
-  document.getElementById('infographic-modal').style.display = 'flex';
+  document.getElementById('infographic-modal').style.display = 'block';
   document.body.style.overflow = 'hidden';
 }
 

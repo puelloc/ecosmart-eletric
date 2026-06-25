@@ -299,27 +299,32 @@ section:last-of-type::after {
   font-weight: 600;
 }
 
-/* Services layout: infographic + 3 cards in one flex row */
+/* Services layout: CSS Grid — title full-width row 1, infographic + cards row 2 */
 .services-layout {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 22% repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
   gap: 20px;
   align-items: stretch;
 }
 
-/* Title spans full width above the row on desktop */
+/* Title spans all 4 columns, row 1 */
 .services-title {
-  order: -1;
-  flex: 0 0 100%;
+  grid-column: 1 / -1;
+  grid-row: 1;
   margin-bottom: 0;
 }
 
 .services-infographic {
-  flex: 0 0 22%;
+  grid-column: 1;
+  grid-row: 2;
   position: relative;
-  min-height: 100%;
 }
+
+/* Explicitly place each service card — no auto-placement ambiguity */
+.services-layout > .service-item:nth-child(3) { grid-column: 2; grid-row: 2; }
+.services-layout > .service-item:nth-child(4) { grid-column: 3; grid-row: 2; }
+.services-layout > .service-item:nth-child(5) { grid-column: 4; grid-row: 2; }
 
 /* Clickable infographic button */
 .infographic-btn {
@@ -397,22 +402,21 @@ section:last-of-type::after {
 /* Infographic lightbox */
 .infographic-modal-content {
   position: relative;
-  margin: auto;
+  margin: 5vh auto;
+  width: fit-content;
   max-width: 90vw;
-  max-height: 92vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .infographic-modal-img {
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: 88vh;
   width: auto;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.45);
   display: block;
+  margin: 0 auto;
 }
 
 .infographic-modal-close {
@@ -438,7 +442,7 @@ section:last-of-type::after {
 .service-item {
     border-radius: 8px;
     overflow: hidden;
-    flex: 1;
+    /* grid auto-places these in row 2, columns 2-4 */
     min-width: 0;
     display: flex;
     flex-direction: column;
@@ -1150,18 +1154,25 @@ footer strong {
   }
 
   .services-layout {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 
-  /* On mobile: infographic floats to the top, above the title */
+  /* On mobile: infographic row 1, title row 2, cards auto-flow after */
   .services-infographic {
-    order: -2;
+    grid-column: 1;
+    grid-row: 1;
     position: static;
     min-height: unset;
   }
 
   .services-title {
-    order: -1;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .services-layout .service-item {
+    grid-column: 1;
   }
 
   .info-graphic-img {
