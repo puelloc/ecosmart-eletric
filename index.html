@@ -1,0 +1,388 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecosmart Electric – Qualified Electrician</title>
+  <meta name="description" content="Ecosmart Electric – Commercial & Residential electrical services. New installations, repairs, lighting automation, panel & wiring upgrades. Licensed and insured. Call 786-778-6654." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%237ed957' d='M32 6a18 18 0 0 0-9 33v5a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5A18 18 0 0 0 32 6z'/%3E%3Cpath fill='%23ffffff' d='M20 34h9l-4 8 19-14h-9l4-8z'/%3E%3C/ svg%3E" />
+
+  <!-- Schema.org: LocalBusiness (Electrician) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Ecosmart Electric",
+      "image": "",
+      "telephone": "+1-786-778-6654",
+      "email": "mailto:ecosmartelectric@hotmail.com",
+      "areaServed": "Miami, FL",
+      "url": "https://your-github-username.github.io/ecosmart-electric",
+      "description": "Commercial and residential electrical services: new installations, repairs, wiring & panel upgrades, lighting automation, outdoor & pole lighting, troubleshooting. Licensed and insured."
+    }
+  </script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header aria-label="Top Navigation">
+  <div class="container topbar">
+    <div class="brand" aria-label="Brand">
+      <div class="logo" aria-hidden="true">
+        <img src="images/logo.svg" alt="Ecosmart Electric logo" />
+      </div>
+      <div class="name">
+        <span class="accent">ECOSMART</span> ELECTRIC
+      </div>
+    </div>
+    <div class="lang-switch" title="Language" onclick="toggleLanguageDropdown(this)">
+      <span style="font-weight:700">🌐</span>
+      <span class="lang-display" data-i18n="lang_button_text">Language</span>
+      <div class="lang-dropdown">
+        <div class="lang-option" onclick="selectLanguage('en', 'English')">English</div>
+        <div class="lang-option active" onclick="selectLanguage('es', 'Español')">Español</div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-container">
+    <div class="container">
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" aria-label="Go to Home section" data-i18n="nav_home">Home</a></li>
+          <li><a href="#services" aria-label="Go to Services section" data-i18n="nav_services">Services</a></li>
+          <li><a href="#project" aria-label="Go to Projects section" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#faq" aria-label="Go to FAQ section" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="#contact-us" aria-label="Go to Contact section" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1 data-i18n="hero_title" class="title">Welcome to Ecosmart Electric</h1>
+      <p class="hero-description" data-i18n="hero_description">
+        At Ecosmart Electric, we offer sustainable, high-quality electrical solutions for our customers. Our mission is to provide exceptional service at an environmentally friendly price, ensuring total customer satisfaction, certified plans, and legal insurance.
+      </p>
+      <h3 data-i18n="hero_about_us" class="hero-about-us">lang.hero_about_us</h3>
+      <p class="hero-description" data-i18n="hero-card-description">
+        At Ecosmart Electric, we specialize in providing sustainable, high-quality electrical solutions to meet all your needs. Whether you're starting <strong>new projects</strong>, need immediate <strong>repairs</strong>, or are looking to <strong>modernize</strong> your electrical system, our team of experts is here to help. Our mission is to deliver exceptional service at an eco-friendly price, ensuring maximum customer satisfaction with every project we undertake.
+      </p>
+    </div>
+  </section>
+
+    <section id="services" aria-labelledby="services-title">
+        <div class="container services">
+            <div class="services-layout">
+                <div class="services-infographic">
+                    <button class="infographic-btn" onclick="openInfoGraphicModal()" aria-label="View full infographic">
+                        <img
+                            id="info-graphic-img"
+                            src="images/june2026/ecosmart_info_english.png"
+                            data-src-en="images/june2026/ecosmart_info_english.png"
+                            data-src-es="images/june2026/ecosmart_info_espanol.png"
+                            alt="Ecosmart Electric – Services Overview"
+                            class="info-graphic-img"
+                        >
+                        <span class="infographic-hint" aria-hidden="true">🔍</span>
+                    </button>
+                </div>
+                <h1 data-i18n="services_title" class="title services-title">lang.services_title</h1>
+                <div class="service-item">
+                    <img src="images/services/electrical_installations.webp" alt="Electrical Installations" class="service-image">
+                    <h3 data-i18n="electrical_installations_title">lang.electrical_installations_title</h3>
+                    <p data-i18n="electrical_installations_subtitle">lang.electrical_installations_subtitle</p>
+                    <button class="service-more-btn" data-i18n="service_more_info">More information</button>
+                </div>
+                <div class="service-item">
+                    <img src="images/services/electrical_maintenance.webp" alt="Electrical Maintenance" class="service-image">
+                    <h3 data-i18n="electrical_maintenance_title">lang.electrical_maintenance_title</h3>
+                    <p data-i18n="electrical_maintenance_subtitle">lang.electrical_maintenance_subtitle</p>
+                    <button class="service-more-btn" data-i18n="service_more_info">More information</button>
+                </div>
+                <div class="service-item">
+                    <img src="images/services/led_lighting.webp" alt="LED Lighting" class="service-image">
+                    <h3 data-i18n="led_lighting_title">lang.led_lighting_title</h3>
+                    <p data-i18n="led_lighting_subtitle">lang.led_lighting_subtitle</p>
+                    <button class="service-more-btn" data-i18n="service_more_info">More information</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-title">
+        <div class="container faq-section">
+            <h1 id="faq-title" class="title" data-i18n="faq_title">lang.faq_title</h1>
+            <div class="faq-list">
+                <div class="faq-item open">
+                    <button class="faq-question" aria-expanded="true">
+                        <span data-i18n="faq_q1">lang.faq_q1</span>
+                        <span class="faq-icon">▲</span>
+                    </button>
+                    <div class="faq-answer" data-i18n="faq_a1">lang.faq_a1</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq_q2">lang.faq_q2</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer" data-i18n="faq_a2">lang.faq_a2</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq_q3">lang.faq_q3</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer" data-i18n="faq_a3">lang.faq_a3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROJECTS -->
+    <section id="project" aria-labelledby="projects-title">
+        <div class="container projects">
+            <h1 data-i18n="projects_title" class="title">lang.projects_title</h1>
+            <div class="project-gallery-container">
+                <button class="scroll-btn scroll-left" aria-label="Scroll left">
+                    <span aria-hidden="true">❮</span>
+                </button>
+                <div class="project-gallery">
+                    <div class="project-item">
+                        <img src="images/october/light_1.jpg" alt="LED Light Installation" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/october/light_2.jpg" alt="Light Installation" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/october/kitchen_light_1.jpg" alt="Kitchen Lighting Installation" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/october/ceiling_fan_1.jpg" alt="Ceiling Fan Installation" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/october/ceiling_fan_2.jpg" alt="Ceiling Fan Installation" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/october/box_1.jpg" alt="Electrical Box Installation" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/1.webp" alt="Project 1" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/2.webp" alt="Project 2" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/3.webp" alt="Project 3" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/4.webp" alt="Project 4" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/5.webp" alt="Project 5" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/6.webp" alt="Project 6" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/7.webp" alt="Project 7" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/8.webp" alt="Project 8" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/9.webp" alt="Project 9" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/10.webp" alt="Project 10" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/11.webp" alt="Project 11" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/12.webp" alt="Project 12" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/13.webp" alt="Project 13" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/14.webp" alt="Project 14" class="project-image">
+                    </div>
+                    <div class="project-item">
+                        <img src="images/projects/15.webp" alt="Project 15" class="project-image">
+                    </div>
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="Scroll right">
+                    <span aria-hidden="true">❯</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+  <!-- Contact Us -->
+  <section id="contact-us" aria-labelledby="contact-us-title">
+    <div class="container">
+      <h1 id="contact-us-title" class="title" data-i18n="contact_title">lang.contact_title</h1>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2 data-i18n="contact_info_title" class="contact-info-title">lang.contact_info_title</h2>
+          <div class="contact-methods">
+            <a href="tel:+1-786-778-6654" class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-details">
+                <h3 data-i18n="contact_phone_title">Call Us</h3>
+                <span class="contact-link">786-778-6654</span>
+              </div>
+            </a>
+            <a href="sms:+1-786-778-6654" class="contact-item">
+              <div class="contact-icon">💬</div>
+              <div class="contact-details">
+                <h3 data-i18n="contact_text_title">Text Us</h3>
+                <span class="contact-link">786-778-6654</span>
+              </div>
+            </a>
+            <a href="mailto:ecosmartelectric@hotmail.com" class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-details">
+                <h3 data-i18n="contact_email_title">Email Us</h3>
+                <span class="contact-link">ecosmartelectric@hotmail.com</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="areas-we-serve" id="areas-we-serve">
+          <h2 data-i18n="areas_title">lang.areas_title</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d917598.5646811195!2d-80.82882483190922!3d26.054181550000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9745374484071%3A0xeb174b8d9d82af56!2sMiami%20Metropolitan%20Area%2C%20FL!5e0!3m2!1sen!2sus!4v1757102951002!5m2!1sen!2sus"
+              width="100%"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Service Area Map - Miami, Florida">
+            </iframe>
+          </div>
+          <div class="location-info">
+            <h3 data-i18n="location_title">Ubicación</h3>
+            <div class="location-details">
+              <p><strong>Ecosmart Electric</strong></p>
+              <p data-i18n="location_address">Miami, Florida, Estados Unidos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Infographic Lightbox -->
+<div id="infographic-modal" class="modal" role="dialog" aria-modal="true" aria-label="Services infographic enlarged">
+  <div class="infographic-modal-content">
+    <button class="modal-close infographic-modal-close" onclick="closeInfoGraphicModal()" aria-label="Close">&times;</button>
+    <img id="infographic-modal-img" src="" alt="Ecosmart Electric – Services Overview" class="infographic-modal-img">
+  </div>
+</div>
+
+<!-- Service Modals -->
+<div id="service-modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeServiceModal()">&times;</span>
+    <div class="modal-body">
+      <img id="modal-service-image" src="" alt="" class="modal-image">
+      <h2 id="modal-service-title" class="modal-title"></h2>
+      <p id="modal-service-description" class="modal-description"></p>
+      <div class="modal-features">
+        <h3 data-i18n="modal_features_title">What We Offer:</h3>
+        <ul id="modal-service-features"></ul>
+      </div>
+      <div class="modal-contact">
+        <h3 data-i18n="modal_contact_title">Get Started Today</h3>
+        <p data-i18n="modal_contact_text">Contact us for a free consultation and quote</p>
+        <div class="modal-contact-buttons">
+          <a href="tel:+1-786-778-6654" class="modal-btn modal-btn-primary">
+            <span class="modal-btn-icon">📞</span>
+            <span data-i18n="modal_call_btn">Call Now</span>
+          </a>
+          <a href="sms:+1-786-778-6654" class="modal-btn modal-btn-secondary">
+            <span class="modal-btn-icon">💬</span>
+            <span data-i18n="modal_text_btn">Text Us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            © <span id="year"></span> <strong>Ecosmart Electric</strong> · <span data-i18n="copyright">All rights reserved.</span>
+        </div>
+        <div class="social-links">
+            <a href="https://www.threads.net/@ecosmart.electric" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Threads">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.09 2.445 7.6 5.897 9.162.288.096.537-.12.447-.424-.135-.456-.472-1.49-.603-1.992-.168-.648-.024-1.224.432-1.632 1.44-.96 2.148-2.928 2.148-4.38 0-2.136-1.596-3.924-3.72-3.924-2.844 0-4.512 2.016-4.512 4.356 0 1.224.588 2.76 1.74 3.132.18.06.324-.048.276-.228-.108-.42-.324-1.344-.456-1.788-.168-.588-.312-1.128-.012-1.512.48-.624 1.344-1.728 2.568-1.728 1.452 0 2.4.924 2.4 2.22 0 1.62-.78 3.552-1.896 3.552-1.164 0-2.028-1.296-1.752-2.808.312-1.764 1.152-3.48 1.152-4.644 0-1.128-.9-2.016-2.112-2.016-1.692 0-2.808 1.464-2.808 3.324 0 1.284.42 2.196.42 2.196s-1.344 5.688-1.584 6.684c-.336 1.404-.06 3.18.048 3.408.084.18.336.228.492.084.192-.18 2.544-2.388 3.108-4.14.204-.648.984-3.216.984-3.216.396.756 1.56 1.392 2.892 1.392 3.612 0 5.928-3.096 5.928-6.504 0-3.036-2.196-5.46-5.22-5.46-3.468 0-5.592 2.568-5.592 5.256 0 1.164.444 1.944.444 1.944s-1.116 4.392-1.308 5.172c-.18.72-.012 1.548-.012 1.548s.324 1.296.384 1.536c.036.144.132.48.18.636.108.324.456.456.66.156.3-.432 1.68-2.184 1.68-2.184s.6 2.412.708 2.82c.18.696.288 1.2.564 1.608.276.408.6.624.816.516.48-.252.684-1.2.684-1.848 0-1.02-.3-1.932-.3-1.932s1.416.96 3.384.84c2.232-.132 3.672-1.608 4.056-3.012.384-1.404.18-3.132-.384-5.268-.96-3.528-2.016-5.328-4.836-5.328z"/></svg>
+            </a>
+            <a href="https://x.com/ecosmartel63638" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/ecosmart.electric" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.802c-3.116 0-3.483.011-4.71.068-2.736.124-3.914 1.3-4.04 4.04-.057 1.226-.067 1.595-.067 4.71s.01 3.484.067 4.71c.125 2.736 1.304 3.914 4.04 4.04 1.227.057 1.594.067 4.71.067s3.483-.01 4.71-.067c2.736-.125 3.914-1.304 4.04-4.04.057-1.226.067-1.595.067-4.71s-.01-3.484-.067-4.71c-.125-2.736-1.304-3.914-4.04-4.04-1.227-.057-1.594-.068-4.71-.068zm0 3.191a6.844 6.844 0 100 13.688 6.844 6.844 0 000-13.688zm0 1.802a5.042 5.042 0 110 10.084 5.042 5.042 0 010-10.084zm6.406-4.802a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg>
+            </a>
+            <a href="https://facebook.com/ecosmart.electric.services" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-1.5c-1 0-1.5.5-1.5 1.5V12h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="js/script.js"></script>
+<script>
+  function toggleLanguageDropdown(element) {
+      event.stopPropagation();
+      element.classList.toggle('active');
+  }
+
+  function selectLanguage(code, name) {
+      event.stopPropagation();
+      const langSwitch = document.querySelector('.lang-switch');
+      const langDisplay = langSwitch.querySelector('.lang-display');
+      const options = langSwitch.querySelectorAll('.lang-option');
+
+      // Update display text
+      langDisplay.textContent = name;
+
+      // Update active option
+      options.forEach(option => option.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Close dropdown
+      langSwitch.classList.remove('active');
+
+      // Use main language switching logic
+      if (typeof applyLang === "function") {
+        applyLang(code);
+      }
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+      const langSwitch = document.querySelector('.lang-switch');
+      if (!langSwitch.contains(event.target)) {
+          langSwitch.classList.remove('active');
+      }
+  });
+</script>
+</body>
+</html>
+
