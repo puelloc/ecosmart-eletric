@@ -67,7 +67,7 @@ body::before {
       rgba(15, 32, 50, 0.9) 92%,
       #0f2032 100%
     ),
-    url("../images/july2026_hero_image/background_desktop_1.png");
+    url("../images/july2026_hero_image/background_desktop_1.webp");
   background-position: center center, center center;
   background-size: 100% 100%, cover;
   background-repeat: no-repeat, no-repeat;
@@ -1080,7 +1080,7 @@ footer strong {
         rgba(15, 32, 50, 0.86) 91%,
         #0f2032 100%
       ),
-      url("../images/july2026_hero_image/background_image_mobile.png");
+      url("../images/july2026_hero_image/background_image_mobile.webp");
     background-position: center center, center center;
     background-size: 100% 100%, cover;
   }
