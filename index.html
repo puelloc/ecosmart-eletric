@@ -78,27 +78,6 @@
             </p>
           </div>
         </div>
-        <div class="hero-media">
-          <div class="hero-image-frame">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="images/july2026_hero_image/hero_image_electrified_city_640.webp 640w, images/july2026_hero_image/hero_image_electrified_city_960.webp 960w"
-                sizes="(max-width: 768px) 100vw, 46vw"
-              >
-              <img
-                src="images/july2026_hero_image/hero_image_electrified_city.png"
-                alt="Miami skyline, marina, and home connected by an illuminated green energy graphic"
-                class="hero-image"
-                width="1119"
-                height="960"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-              >
-            </picture>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -106,19 +85,6 @@
     <section id="services" aria-labelledby="services-title">
         <div class="container services">
             <div class="services-layout">
-                <div class="services-infographic">
-                    <button class="infographic-btn" onclick="openInfoGraphicModal()" aria-label="View full infographic">
-                        <img
-                            id="info-graphic-img"
-                            src="images/june2026/ecosmart_info_english.png"
-                            data-src-en="images/june2026/ecosmart_info_english.png"
-                            data-src-es="images/june2026/ecosmart_info_espanol.png"
-                            alt="Ecosmart Electric – Services Overview"
-                            class="info-graphic-img"
-                        >
-                        <span class="infographic-hint" aria-hidden="true">🔍</span>
-                    </button>
-                </div>
                 <h1 data-i18n="services_title" class="title services-title">lang.services_title</h1>
                 <div class="service-item">
                     <img src="images/services/electrical_installations.webp" alt="Electrical Installations" class="service-image">
@@ -311,14 +277,6 @@
   </section>
 
 </main>
-
-<!-- Infographic Lightbox -->
-<div id="infographic-modal" class="modal" role="dialog" aria-modal="true" aria-label="Services infographic enlarged">
-  <div class="infographic-modal-content">
-    <button class="modal-close infographic-modal-close" onclick="closeInfoGraphicModal()" aria-label="Close">&times;</button>
-    <img id="infographic-modal-img" src="" alt="Ecosmart Electric – Services Overview" class="infographic-modal-img">
-  </div>
-</div>
 
 <!-- Service Modals -->
 <div id="service-modal" class="modal">

@@ -240,17 +240,12 @@ window.addEventListener('click', function(event) {
   if (event.target === modal) {
     closeServiceModal();
   }
-  const infoModal = document.getElementById('infographic-modal');
-  if (event.target === infoModal) {
-    closeInfoGraphicModal();
-  }
 });
 
 // Close modal on Escape key
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
     closeServiceModal();
-    closeInfoGraphicModal();
   }
 });
 
@@ -263,16 +258,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Infographic lightbox
-function openInfoGraphicModal() {
-  const src = document.getElementById('info-graphic-img').src;
-  const modalImg = document.getElementById('infographic-modal-img');
-  modalImg.src = src;
-  document.getElementById('infographic-modal').style.display = 'block';
-  document.body.style.overflow = 'hidden';
-}
-
-function closeInfoGraphicModal() {
-  document.getElementById('infographic-modal').style.display = 'none';
-  document.body.style.overflow = 'auto';
-}
